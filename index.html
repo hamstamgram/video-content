@@ -583,7 +583,7 @@ function renderSwiper() {
           </div>
           <div class="video-preview-wrapper">
             <div class="video-preview-box">
-              <img src="assets/img/${p.img}" alt="" class="video-preview-img" loading="lazy"/>
+              <img src="${p.th}" alt="" class="video-preview-img" loading="lazy"/>
             </div>
             <div class="bracket tl"></div><div class="bracket tr"></div>
             <div class="bracket bl"></div><div class="bracket br"></div>
@@ -605,8 +605,8 @@ function renderSwiper() {
         </div>
         <div class="slide-name-right">${italicizeTitle(right)}</div>
       </div>
-      <div class="adj-preview is--top"><img src="assets/img/${filtered[(i - 1 + filtered.length) % filtered.length].img}" alt="" loading="lazy"/></div>
-      <div class="adj-preview is--bottom"><img src="assets/img/${filtered[(i + 1) % filtered.length].img}" alt="" loading="lazy"/></div>
+      <div class="adj-preview is--top"><img src="${filtered[(i - 1 + filtered.length) % filtered.length].th}" alt="" loading="lazy"/></div>
+      <div class="adj-preview is--bottom"><img src="${filtered[(i + 1) % filtered.length].th}" alt="" loading="lazy"/></div>
     `;
     w.appendChild(slide);
   });
