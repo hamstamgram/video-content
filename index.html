@@ -63,9 +63,9 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .preloader-name.is--reveal{opacity:1;transform:translateY(0)}
 
 /* ─── Film Ruler Decor ──────────────────────────────────────── */
-.decor-rulers{position:fixed;inset:0;z-index:10005;pointer-events:none;display:flex;justify-content:space-between;padding:0 8px}
+.decor-rulers{position:fixed;inset:0;z-index:10005;pointer-events:none;display:flex;justify-content:space-between;padding:0 6px}
 .decor-ruler{width:8px;height:100%;overflow:hidden;writing-mode:sideways-lr}
-.decor-ruler-text{font-family:var(--mono);font-size:8px;color:rgba(255,238,200,0.2);white-space:nowrap;animation:rulerScroll 60s linear infinite}
+.decor-ruler-text{font-family:var(--mono);font-size:7px;color:rgba(255,238,200,0.15);white-space:nowrap;animation:rulerScroll 80s linear infinite}
 .decor-ruler.is--right{direction:rtl}
 @keyframes rulerScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
 
@@ -111,8 +111,8 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 /* Slide content overlay */
 .slide-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;z-index:5}
 
-/* Name centered */
-.slide-name{font-family:var(--serif);font-weight:200;font-size:clamp(2rem,3.6vw,3.6rem);line-height:1.06;letter-spacing:-0.02em;text-align:center;color:var(--lemon)}
+/* Name centered — spec: 53px / 56.18px line / -1.06px tracking */
+.slide-name{font-family:var(--serif);font-weight:200;font-size:clamp(2rem,3.3125vw,3.3125rem);line-height:1.06;letter-spacing:-0.066em;text-align:center;color:var(--lemon)}
 .slide-name .il{font-family:var(--serif-i);font-style:italic}
 
 /* Play block below name */
@@ -163,20 +163,20 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .player-body{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .player-video-block{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 .player-video{width:100%;height:100%;object-fit:contain}
-.player-bottom{display:flex;flex-direction:column;align-items:center;gap:0.5rem;padding:12px 20px 20px;flex-shrink:0}
-.player-pause{font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);letter-spacing:0.05em;text-transform:uppercase;cursor:none;color:var(--lemon);transition:opacity .3s}
+.player-bottom{display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:10px 20px 22px;flex-shrink:0}
 .player-time{display:flex;align-items:center;gap:0.6rem;font-family:var(--mono);font-size:10px;color:var(--dimmer)}
+.player-pause{font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);letter-spacing:0.05em;text-transform:uppercase;cursor:none;color:var(--lemon);transition:opacity .3s}
 .player-time-dot{width:4px;height:4px;border-radius:50%;background:var(--dimmer)}
 .player-loop{width:5px;height:5px;border-radius:50%;background:var(--lemon);opacity:0.5;cursor:none;position:absolute;right:20px;bottom:20px}
 .player-loop.is--active{opacity:1}
 
-/* Player side navigation (project name overlay) */
-.player-title{position:absolute;bottom:20px;left:20px;z-index:3}
-.player-title-name{font-family:var(--serif);font-weight:200;font-size:clamp(1rem,1.6vw,1.8rem);letter-spacing:-0.02em;color:var(--lemon)}
+/* Player side navigation (project name overlay) — matched to original */
+.player-title{position:absolute;bottom:24px;left:20px;z-index:3}
+.player-title-name{font-family:var(--serif);font-weight:200;font-size:clamp(1.2rem,2.2vw,2.4rem);letter-spacing:-0.02em;color:var(--lemon);line-height:1.15}
 .player-title-name .il{font-family:var(--serif-i);font-style:italic}
-.player-meta{position:absolute;bottom:20px;right:20px;text-align:right;z-index:3}
-.player-meta-type{font-family:var(--mono);font-size:10px;color:var(--dimmer)}
-.player-meta-cat{font-family:var(--mono);font-size:10px;color:var(--dimmer);margin-top:2px}
+.player-meta{position:absolute;bottom:26px;right:20px;text-align:right;z-index:3}
+.player-meta-type{font-family:var(--mono);font-size:10px;color:var(--dimmer);letter-spacing:0.02em}
+.player-meta-cat{font-family:var(--mono);font-size:10px;color:var(--dimmer);margin-top:3px;letter-spacing:0.02em}
 
 /* ─── List View ─────────────────────────────────────────────── */
 .list-view{position:absolute;inset:0;z-index:2;overflow-y:auto;overflow-x:hidden;padding-top:60px;display:none}
@@ -208,7 +208,7 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .project-bg-video{position:fixed;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s;pointer-events:none}
 
 /* ─── Footer ────────────────────────────────────────────────── */
-.site-footer{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:19px 20px 20px;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none}
+.site-footer{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:16px 20px 18px;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none}
 .footer-left{display:flex;align-items:center;gap:1.5rem;pointer-events:all}
 .footer-year{font-family:var(--sans);font-size:clamp(0.55rem,0.65vw,0.7rem);color:var(--dimmer);letter-spacing:0.02em;display:none}
 @media(min-width:768px){.footer-year{display:block}}
@@ -347,12 +347,12 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
     </div>
   </div>
   <div class="player-bottom">
-    <button class="player-pause" id="player-pause">pause</button>
     <div class="player-time">
       <span id="player-time-current">00:00</span>
       <div class="player-time-dot"></div>
       <span id="player-time-total">00:00</span>
     </div>
+    <button class="player-pause" id="player-pause">pause</button>
   </div>
   <div class="player-loop" id="player-loop"></div>
 </div>
