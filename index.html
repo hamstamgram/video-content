@@ -120,11 +120,11 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .swiper-slide{position:relative;width:100%;height:100%;overflow:hidden}
 
 /* Slide content — 3-column grid matching original */
-.slide-content{position:absolute;inset:0;display:grid;grid-template-columns:1fr 34.3% 1fr;grid-template-rows:100%;align-items:center;justify-content:center;z-index:5;padding:0 3.5%}
+.slide-content{position:absolute;inset:0;display:grid;grid-template-columns:1fr 34.3% 1fr;grid-template-rows:100%;align-items:center;justify-content:center;z-index:5;padding:0;gap:4px}
 
 /* Name columns — 95px split title */
-.slide-name-left{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:right;color:var(--lemon);align-self:center}
-.slide-name-right{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:left;color:var(--lemon);align-self:center}
+.slide-name-left{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:right;color:var(--lemon);align-self:center;padding-left:3.5vw}
+.slide-name-right{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:left;color:var(--lemon);align-self:center;padding-right:3.5vw}
 .slide-name-left .il,.slide-name-right .il{font-family:var(--serif-i);font-style:italic}
 
 /* Center column — info + play */
@@ -510,8 +510,8 @@ function italicizeTitle(title) {
     else if (padConfig.tinyNeg.includes(first)) style = 'margin-left:-0.25vw';
     else if (padConfig.leftNeg.includes(first)) style = 'margin-left:-0.4vw';
     else if (padConfig.largeNeg.includes(first)) style = 'margin-left:-0.9vw';
-    return `<span class="word" style="display:inline-block"><span class="il" style="${style}">${w[0]}</span>${rest}</span>`;
-  }).join(' ');
+    return `<span class="word" style="display:inline-block;margin-right:0.25em"><span class="il" style="${style}">${w[0]}</span>${rest}</span>`;
+  }).join('');
 }
 
 function catLabel(c) {
