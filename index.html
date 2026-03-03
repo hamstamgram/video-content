@@ -133,8 +133,8 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 /* Video preview box in center */
 .video-preview-wrapper{position:relative;width:100%;aspect-ratio:494/310;flex-shrink:0}
 .video-preview-box{width:100%;height:100%;overflow:hidden;position:relative}
-.video-preview-img{width:100%;height:100%;object-fit:cover;opacity:0.35;transition:opacity .5s}
-.video-preview-wrapper:hover .video-preview-img{opacity:0.55}
+.video-preview-img{width:100%;height:100%;object-fit:cover;opacity:0.25;transition:opacity .5s;filter:brightness(0.7)}
+.video-preview-wrapper:hover .video-preview-img{opacity:0.45}
 /* Corner brackets */
 .bracket{position:absolute;width:12px;height:12px;pointer-events:none}
 .bracket::before,.bracket::after{content:'';position:absolute;background:var(--dimmer)}
@@ -142,8 +142,8 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .bracket.tr{top:-1px;right:-1px}.bracket.tr::before{top:0;right:0;width:12px;height:1px}.bracket.tr::after{top:0;right:0;width:1px;height:12px}
 .bracket.bl{bottom:-1px;left:-1px}.bracket.bl::before{bottom:0;left:0;width:12px;height:1px}.bracket.bl::after{bottom:0;left:0;width:1px;height:12px}
 .bracket.br{bottom:-1px;right:-1px}.bracket.br::before{bottom:0;right:0;width:12px;height:1px}.bracket.br::after{bottom:0;right:0;width:1px;height:12px}
-/* Play block overlaid on preview */
-.slide-play{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;height:6.5rem;cursor:none;overflow:hidden}
+/* Play block below preview */
+.slide-play{display:flex;align-items:flex-start;justify-content:center;padding-top:0.5rem;cursor:none;overflow:hidden}
 .slide-play-text{font-family:var(--serif);font-weight:200;font-size:clamp(2.4rem,4.5vw,4.5rem);color:var(--lemon);line-height:1}
 .slide-play-text .il{font-family:var(--serif-i);font-style:italic}
 .slide-play-inner{transform:translateY(0);transition:transform .6s var(--ease)}
@@ -166,9 +166,9 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 
 /* Adjacent project previews (top/bottom) */
 .adj-preview{position:absolute;left:50%;transform:translateX(-50%);width:34.3%;z-index:3;overflow:hidden;pointer-events:none}
-.adj-preview.is--top{top:-70%;height:80%}
-.adj-preview.is--bottom{bottom:-60%;height:80%}
-.adj-preview img{width:100%;height:100%;object-fit:cover;opacity:0.3}
+.adj-preview.is--top{top:-82%;height:85%}
+.adj-preview.is--bottom{bottom:-72%;height:85%}
+.adj-preview img{width:100%;height:100%;object-fit:cover;opacity:0.35}
 
 /* PREV / NEXT edge zones */
 .slide-nav-zone{position:absolute;top:0;bottom:0;width:15vw;z-index:8;display:flex;align-items:center;cursor:none;pointer-events:all}
@@ -587,11 +587,11 @@ function renderSwiper() {
             </div>
             <div class="bracket tl"></div><div class="bracket tr"></div>
             <div class="bracket bl"></div><div class="bracket br"></div>
-            <div class="slide-play" data-idx="${i}">
-              <div class="overflow-hidden">
-                <div class="slide-play-inner">
-                  <span class="slide-play-text"><span class="il">P</span>lay</span>
-                </div>
+          </div>
+          <div class="slide-play" data-idx="${i}">
+            <div class="overflow-hidden">
+              <div class="slide-play-inner">
+                <span class="slide-play-text"><span class="il">P</span>lay</span>
               </div>
             </div>
           </div>
