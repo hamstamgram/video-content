@@ -130,11 +130,9 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 /* Center column — info + play */
 .slide-center{display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;height:40vh;align-self:center}
 
-/* Video preview box in center */
+/* Video preview box in center — transparent zone, bg video shows through */
 .video-preview-wrapper{position:relative;width:100%;aspect-ratio:494/310;flex-shrink:0}
-.video-preview-box{width:100%;height:100%;overflow:hidden;position:relative}
-.video-preview-img{width:100%;height:100%;object-fit:cover;opacity:0.25;transition:opacity .5s;filter:brightness(0.7)}
-.video-preview-wrapper:hover .video-preview-img{opacity:0.45}
+.video-preview-box{width:100%;height:100%;overflow:hidden;position:relative;background:transparent}
 /* Corner brackets */
 .bracket{position:absolute;width:12px;height:12px;pointer-events:none}
 .bracket::before,.bracket::after{content:'';position:absolute;background:var(--dimmer)}
@@ -315,11 +313,27 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .intro-overlay{position:fixed;inset:0;z-index:50001;background:var(--bg);display:flex;align-items:center;justify-content:center}
 .intro-brand{font-family:var(--serif);font-weight:200;font-size:clamp(3rem,8vw,7rem);color:var(--lemon);letter-spacing:-0.03em;white-space:nowrap;opacity:0}
 .intro-brand .il{font-family:var(--serif-i);font-style:italic}
+.intro-left,.intro-right{display:inline-block}
 
-/* Center preview video */
-.video-preview-vid{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s;position:absolute;inset:0;z-index:1}
-.video-preview-wrapper:hover .video-preview-vid{opacity:0.5}
-.video-preview-wrapper:hover .video-preview-img{opacity:0}
+/* Center preview is transparent — no video/img needed */
+
+/* ─── Mini Preview Widget (bottom-right) ───────────────────── */
+.mini-preview{position:fixed;bottom:50px;right:20px;width:120px;height:80px;z-index:9998;overflow:hidden;pointer-events:none;opacity:0.6}
+.mini-preview img{width:100%;height:100%;object-fit:cover}
+.mini-preview-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3)}
+.mini-preview-name{font-family:var(--mono);font-size:7px;color:var(--lemon);letter-spacing:0.05em;text-transform:uppercase;text-align:center;line-height:1.4;opacity:0.8}
+
+/* ─── Center Column Tick Marks ─────────────────────────────── */
+.tick-marks{position:fixed;inset:0;z-index:3;pointer-events:none}
+.tick-col{position:absolute;top:0;bottom:0;width:8px}
+.tick-col.is--left{left:calc(((100vw - 34.3vw) / 2) - 6px)}
+.tick-col.is--right{right:calc(((100vw - 34.3vw) / 2) - 6px)}
+.tick-line{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,238,200,0.08)}
+.tick-col.is--left .tick-line{right:0}
+.tick-col.is--right .tick-line{left:0}
+.tick-mark{position:absolute;width:6px;height:1px;background:rgba(255,238,200,0.15)}
+.tick-col.is--left .tick-mark{right:0}
+.tick-col.is--right .tick-mark{left:0}
 
 /* ─── Utilities ─────────────────────────────────────────────── */
 .overflow-hidden{overflow:hidden}
@@ -345,7 +359,21 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 
 <!-- Intro Overlay (P2) -->
 <div class="intro-overlay" id="intro-overlay">
-  <div class="intro-brand" id="intro-brand"><span class="il">V</span>ideo <span class="il">C</span>ontent</div>
+  <div class="intro-brand" id="intro-brand"><span class="intro-left"><span class="il">V</span>ideo</span><span class="intro-right"><span class="il">C</span>ontent</span></div>
+</div>
+
+<!-- Mini Preview Widget -->
+<div class="mini-preview" id="mini-preview">
+  <img id="mini-preview-img" src="" alt="">
+  <div class="mini-preview-overlay">
+    <div class="mini-preview-name" id="mini-preview-name"></div>
+  </div>
+</div>
+
+<!-- Center Column Tick Marks -->
+<div class="tick-marks">
+  <div class="tick-col is--left" id="tick-left"><div class="tick-line"></div></div>
+  <div class="tick-col is--right" id="tick-right"><div class="tick-line"></div></div>
 </div>
 
 <!-- Cursor -->
@@ -608,12 +636,41 @@ let bgActiveIdx = 1;
   document.getElementById('ruler-right').textContent = doubled;
 })();
 
-/* ═══════ CLOCK ═══════ */
+/* ═══════ TICK MARKS ═══════ */
+(function initTickMarks() {
+  ['tick-left', 'tick-right'].forEach(id => {
+    const col = document.getElementById(id);
+    const h = window.innerHeight;
+    for (let y = 0; y < h; y += 20) {
+      const tick = document.createElement('div');
+      tick.className = 'tick-mark';
+      tick.style.top = y + 'px';
+      col.appendChild(tick);
+    }
+  });
+})();
+
+/* ═══════ MINI PREVIEW ═══════ */
+function updateMiniPreview(idx) {
+  const p = filtered[idx];
+  if (!p) return;
+  const img = document.getElementById('mini-preview-img');
+  const name = document.getElementById('mini-preview-name');
+  img.src = p.th;
+  const { left, right } = splitTitle(p.t);
+  name.textContent = left + ' / ' + right;
+}
+
+/* ═══════ CLOCK — elapsed since page load ═══════ */
 (function initClock() {
+  const start = Date.now();
   function tick() {
-    const d = new Date();
+    const elapsed = Math.floor((Date.now() - start) / 1000);
+    const h = Math.floor(elapsed / 3600);
+    const m = Math.floor((elapsed % 3600) / 60);
+    const s = elapsed % 60;
     document.getElementById('footer-clock').textContent =
-      [d.getHours(),d.getMinutes(),d.getSeconds()].map(v=>String(v).padStart(2,'0')).join(':');
+      [h, m, s].map(v => String(v).padStart(2, '0')).join(':');
   }
   tick(); setInterval(tick, 1000);
 })();
@@ -641,11 +698,8 @@ function renderSwiper() {
             </div>
             <div class="slide-top-cat">${catLabel(p.cat)}</div>
           </div>
-          <div class="video-preview-wrapper" data-hover-video="${p.h}">
-            <div class="video-preview-box">
-              <img src="${p.th}" alt="" class="video-preview-img" loading="lazy"/>
-              <video class="video-preview-vid" muted loop playsinline preload="none"></video>
-            </div>
+          <div class="video-preview-wrapper">
+            <div class="video-preview-box"></div>
             <div class="video-hover-overlay">
               <div class="video-hover-inner">
                 <span class="text-dot"></span>
@@ -697,25 +751,18 @@ function renderSwiper() {
   initPreviewHovers();
 }
 
-/* ═══════ P0: PREVIEW VIDEO HOVER ═══════ */
+/* ═══════ P0: CENTER HOVER — play/pause bg video ═══════ */
 function initPreviewHovers() {
-  document.querySelectorAll('.video-preview-wrapper[data-hover-video]').forEach(wrapper => {
-    const vid = wrapper.querySelector('.video-preview-vid');
-    if (!vid || vid.dataset.hoverBound) return;
-    vid.dataset.hoverBound = 'true';
-    const src = wrapper.dataset.hoverVideo;
-
+  document.querySelectorAll('.video-preview-wrapper').forEach(wrapper => {
+    if (wrapper.dataset.hoverBound) return;
+    wrapper.dataset.hoverBound = 'true';
     wrapper.addEventListener('mouseenter', () => {
-      if (!vid.src || vid.src === '') {
-        vid.src = src;
-        vid.load();
-      }
-      vid.play().catch(() => {});
+      const active = document.querySelector('.bg-video.is--active');
+      if (active) active.play().catch(() => {});
     });
-
     wrapper.addEventListener('mouseleave', () => {
-      vid.pause();
-      vid.currentTime = 0;
+      const active = document.querySelector('.bg-video.is--active');
+      if (active) active.pause();
     });
   });
 }
@@ -733,6 +780,7 @@ function updateBgVideo(idx) {
   prevEl.classList.remove('is--active');
   setTimeout(() => { prevEl.pause(); prevEl.src = ''; }, 600);
   bgActiveIdx = nextIdx;
+  updateMiniPreview(idx);
 }
 
 /* ═══════ P1: BLACK WIPE TRANSITION ═══════ */
@@ -1024,6 +1072,9 @@ document.querySelectorAll('.nav-link-top').forEach(l => {
       return;
     }
 
+    const leftSpan = brand.querySelector('.intro-left');
+    const rightSpan = brand.querySelector('.intro-right');
+
     const itl = gsap.timeline({
       onComplete: () => {
         intro.style.display = 'none';
@@ -1031,22 +1082,15 @@ document.querySelectorAll('.nav-link-top').forEach(l => {
       }
     });
 
-    // Phase 1: fade in brand name centered
+    // Phase 1: fade in "VideoContent" centered on black
     itl.to(brand, { opacity: 1, duration: 0.6, ease: 'power2.out' })
-    // Phase 2: hold for a beat
-    .to({}, { duration: 0.6 })
-    // Phase 3: scale down and split — brand shrinks while overlay fades
-    .to(brand, {
-      scale: 0.4,
-      opacity: 0,
-      duration: 1,
-      ease: 'mainEase'
-    })
-    .to(intro, {
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power2.inOut'
-    }, '-=0.7');
+    // Phase 2: hold
+    .to({}, { duration: 1.2 })
+    // Phase 3: split left/right
+    .to(leftSpan, { x: '-35vw', duration: 1.2, ease: 'mainEase' }, 'split')
+    .to(rightSpan, { x: '35vw', duration: 1.2, ease: 'mainEase' }, 'split')
+    // Phase 4: fade out overlay, reveal bg video
+    .to(intro, { opacity: 0, duration: 0.8, ease: 'power2.inOut' }, '-=0.4');
   }
 })();
 
