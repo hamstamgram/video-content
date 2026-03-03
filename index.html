@@ -78,13 +78,19 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .nav-logo:hover .char-dup{opacity:1;transform:translateY(0)}
 .nav-logo:hover .char-main{transform:translateY(100%);opacity:0}
 .nav-logo .char-main{transition:transform .4s var(--ease),opacity .3s;display:inline-block}
-.nav-center{display:flex;align-items:center;gap:0.4rem;font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);letter-spacing:0.05em;text-transform:uppercase}
-.nav-center .sep{color:var(--dimmer)}
+.nav-center{display:flex;align-items:center;gap:0.4rem;font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);letter-spacing:0.05em;text-transform:uppercase;position:absolute;left:180px;top:50%;transform:translateY(-50%)}
+.nav-creative-dot{width:5px;height:5px;border-radius:50%;background:var(--lemon)}
+.nav-creative-text{color:var(--dimmer);font-weight:400;font-size:inherit;letter-spacing:inherit}
 .nav-view-btn{color:var(--dimmer);cursor:none;transition:color .3s;font-weight:500;font-size:inherit;letter-spacing:inherit;text-transform:inherit;font-family:inherit}
 .nav-view-btn.is--active{color:var(--lemon)}
 .nav-view-btn:hover{color:var(--lemon)}
 .nav-right-block{display:flex;align-items:center}
 .nav-menu-btn{font-family:var(--sans);font-weight:500;font-size:clamp(0.6rem,0.7vw,0.75rem);letter-spacing:0.05em;text-transform:uppercase;color:var(--lemon);cursor:none}
+.nav-right-block{gap:0.5rem}
+.nav-link-top{font-family:var(--sans);font-weight:400;font-size:clamp(0.55rem,0.65vw,0.7rem);letter-spacing:0.03em;text-transform:uppercase;color:var(--lemon);cursor:none;transition:color .3s}
+.nav-link-top.is--dim{color:var(--dimmer)}
+.nav-link-top:hover{color:var(--lemon)}
+@media(max-width:767px){.nav-link-top{display:none}}
 
 /* ─── Nav Menu Overlay ──────────────────────────────────────── */
 .nav-menu{position:fixed;inset:0;z-index:9998;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:0 8vw;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
@@ -108,32 +114,36 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .project-swiper{width:100%;height:100%}
 .swiper-slide{position:relative;width:100%;height:100%;overflow:hidden}
 
-/* Slide content overlay */
-.slide-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;z-index:5}
+/* Slide content — 3-column grid matching original */
+.slide-content{position:absolute;inset:0;display:grid;grid-template-columns:1fr 34.3% 1fr;grid-template-rows:100%;align-items:center;justify-content:center;z-index:5;padding:0 3.5%}
 
-/* Name centered — spec: 53px / 56.18px line / -1.06px tracking */
-.slide-name{font-family:var(--serif);font-weight:200;font-size:clamp(2rem,3.3125vw,3.3125rem);line-height:1.06;letter-spacing:-0.066em;text-align:center;color:var(--lemon)}
-.slide-name .il{font-family:var(--serif-i);font-style:italic}
+/* Name columns — 95px split title */
+.slide-name-left{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:right;color:var(--lemon);align-self:center}
+.slide-name-right{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:left;color:var(--lemon);align-self:center}
+.slide-name-left .il,.slide-name-right .il{font-family:var(--serif-i);font-style:italic}
 
-/* Play block below name */
-.slide-play{display:flex;align-items:center;gap:0;margin-top:1rem;cursor:none;overflow:hidden}
+/* Center column — info + play */
+.slide-center{display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;height:40vh;align-self:center}
+
+/* Play block in center column */
+.slide-play{display:flex;align-items:center;justify-content:center;cursor:none;overflow:hidden;align-self:center}
 .slide-play-text{font-family:var(--serif);font-weight:200;font-size:clamp(1.6rem,2.2vw,2.4rem);color:var(--lemon);line-height:1}
 .slide-play-text .il{font-family:var(--serif-i);font-style:italic}
 .slide-play-inner{transform:translateY(0);transition:transform .6s var(--ease)}
 .slide-play:hover .slide-play-inner{transform:translateY(-5%)}
 
-/* Project info top/bottom spanning full slide height */
-.slide-info{position:absolute;left:20px;right:20px;top:70px;bottom:70px;display:flex;flex-direction:column;justify-content:space-between;z-index:6;pointer-events:none}
-.slide-top{display:flex;align-items:center;gap:0.8rem}
-.slide-top-type{font-family:var(--mono);font-size:10px;letter-spacing:-0.01em;color:var(--lemon);overflow:hidden}
+/* Project info top/bottom in center column */
+.slide-top{display:flex;align-items:center;justify-content:space-between;gap:0.8rem}
+.slide-top-type{font-family:var(--mono);font-size:10px;letter-spacing:-0.01em;color:var(--lemon);overflow:hidden;text-transform:uppercase}
 .slide-top-type span{display:block;transform:translateY(0);transition:transform .5s var(--ease)}
 .slide-top-icons{display:flex;gap:6px;opacity:0.5}
 .slide-top-icons svg{width:16px;height:16px}
+.slide-top-cat{font-family:var(--mono);font-size:10px;letter-spacing:-0.01em;color:var(--lemon);text-transform:uppercase}
 .slide-bottom{display:flex;align-items:flex-end;justify-content:space-between}
 .slide-bottom-left{display:flex;align-items:baseline;gap:0.5rem}
 .slide-num{font-family:var(--mono);font-size:10px;letter-spacing:-0.01em;overflow:hidden}
 .slide-num span{display:block;transition:transform .5s var(--ease)}
-.slide-client{font-family:var(--sans);font-size:clamp(0.6rem,0.75vw,0.8rem);letter-spacing:0.02em;color:var(--lemon);overflow:hidden}
+.slide-client{font-family:var(--sans);font-size:clamp(0.6rem,0.75vw,0.8rem);letter-spacing:0.02em;color:var(--lemon);overflow:hidden;text-transform:uppercase}
 .slide-client span{display:block;transition:transform .5s var(--ease)}
 .slide-total{font-family:var(--mono);font-size:10px;letter-spacing:-0.01em;color:var(--dimmer);overflow:hidden}
 
@@ -219,7 +229,8 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .option-item:hover .option-text{color:var(--lemon)}
 .option-sep{font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);color:var(--dimmer);margin:0 0.3rem}
 
-.footer-right{display:flex;align-items:center;gap:1.5rem;pointer-events:all}
+.footer-right{display:grid;grid-template-columns:auto auto;align-items:end;gap:0;pointer-events:all}
+.footer-filters{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .filter-item{display:flex;align-items:center;gap:0.3rem;cursor:none}
 .filter-item .dot{width:5px;height:5px;border-radius:50%;background:var(--lemon);opacity:0;transition:opacity .3s;flex-shrink:0}
 .filter-item.is--active .dot{opacity:1}
@@ -227,19 +238,23 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .filter-item.is--active .filter-label{color:var(--lemon)}
 .filter-item:hover .filter-label{color:var(--lemon)}
 .filter-count{font-family:var(--mono);font-size:0.8em;opacity:0.6;margin-left:0.15em}
+.footer-end{display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;margin-left:2rem;align-self:end}
 .footer-clock{font-family:var(--mono);font-size:10px;color:var(--dimmer);letter-spacing:0.02em;display:none}
 @media(min-width:768px){.footer-clock{display:block}}
+.footer-credits{font-family:var(--sans);font-size:clamp(0.55rem,0.65vw,0.7rem);color:var(--dimmer);letter-spacing:0.02em;text-transform:uppercase;cursor:none;transition:color .3s}
+.footer-credits:hover{color:var(--lemon)}
 
 /* ─── Responsive ────────────────────────────────────────────── */
 @media(max-width:767px){
-  .slide-name{font-size:clamp(1.5rem,7vw,2.5rem)}
-  .slide-info{left:15px;right:15px;top:65px;bottom:65px}
+  .slide-content{grid-template-columns:1fr;grid-template-rows:auto;padding:60px 20px;gap:1rem;align-content:center}
+  .slide-name-left,.slide-name-right{font-size:clamp(1.8rem,8vw,2.8rem);text-align:center}
+  .slide-center{height:auto;gap:1rem}
   .slide-nav-zone{width:20vw}
   .preview-block{display:none}
   .list-video-container{width:100px;height:56px}
   .project-grid{padding:14px 8px 14px 15px;min-height:100px}
   .name-medium{font-size:clamp(0.9rem,3.5vw,1.1rem)}
-  .footer-right{gap:0.8rem}
+  .footer-filters{flex-direction:row;gap:0.6rem}
   .nav-center{font-size:0.6rem}
 }
 
@@ -289,12 +304,15 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
     <span class="char-wrap"><span class="char-main il">V</span><span class="char-dup il">V</span></span>ideo&nbsp;<span class="char-wrap"><span class="char-main il">C</span><span class="char-dup il">C</span></span>ontent
   </a>
   <div class="nav-center">
-    <button class="nav-view-btn is--active" id="btn-slider" data-view="slider">SLIDER</button>
-    <span class="sep">/</span>
-    <button class="nav-view-btn" id="btn-list" data-view="list">LIST</button>
+    <span class="nav-creative-dot"></span>
+    <span class="nav-creative-text">CREATIVE</span>
   </div>
   <div class="nav-right-block">
-    <button class="nav-menu-btn" id="menu-toggle">MENU</button>
+    <a href="#" class="nav-link-top">WORK</a>
+    <a href="#" class="nav-link-top is--dim">REPORTAGE</a>
+    <a href="#" class="nav-link-top" style="margin-left:1.5rem">ARCHIVE</a>
+    <a href="#" class="nav-link-top is--dim">ABOUT</a>
+    <a href="#" class="nav-link-top" style="margin-left:1.5rem">CONTACT</a>
   </div>
 </nav>
 
@@ -372,23 +390,28 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
     </div>
   </div>
   <div class="footer-right" id="filter-bar">
-    <button class="filter-item is--active" data-filter="all">
-      <span class="dot"></span>
-      <span class="filter-label">All <span class="filter-count" id="fc-all">(42)</span></span>
-    </button>
-    <button class="filter-item" data-filter="tv-film">
-      <span class="dot"></span>
-      <span class="filter-label">TV &amp; Film <span class="filter-count" id="fc-tv">(19)</span></span>
-    </button>
-    <button class="filter-item" data-filter="commercial">
-      <span class="dot"></span>
-      <span class="filter-label">Commercial <span class="filter-count" id="fc-com">(16)</span></span>
-    </button>
-    <button class="filter-item" data-filter="editorial">
-      <span class="dot"></span>
-      <span class="filter-label">Editorial <span class="filter-count" id="fc-ed">(07)</span></span>
-    </button>
-    <span class="footer-clock" id="footer-clock">00:00:00</span>
+    <div class="footer-filters">
+      <button class="filter-item is--active" data-filter="all">
+        <span class="dot"></span>
+        <span class="filter-label">All <span class="filter-count" id="fc-all">(42)</span></span>
+      </button>
+      <button class="filter-item" data-filter="tv-film">
+        <span class="dot"></span>
+        <span class="filter-label">TV &amp; Film <span class="filter-count" id="fc-tv">(19)</span></span>
+      </button>
+      <button class="filter-item" data-filter="commercial">
+        <span class="dot"></span>
+        <span class="filter-label">Commercial <span class="filter-count" id="fc-com">(16)</span></span>
+      </button>
+      <button class="filter-item" data-filter="editorial">
+        <span class="dot"></span>
+        <span class="filter-label">Editorial <span class="filter-count" id="fc-ed">(07)</span></span>
+      </button>
+    </div>
+    <div class="footer-end">
+      <span class="footer-clock" id="footer-clock">00:00:00</span>
+      <a href="#" class="footer-credits">CREDITS</a>
+    </div>
   </div>
 </footer>
 
@@ -467,6 +490,21 @@ function catLabel(c) {
   return {'tv-film':'TV & Film','commercial':'Commercial','editorial':'Editorial'}[c] || c;
 }
 
+/* Split title into left (right-aligned) and right (left-aligned) halves */
+function splitTitle(title) {
+  // Handle hyphenated titles like "Noted - Alicia Keys" or "Life's a Trip"
+  const dashIdx = title.indexOf(' - ');
+  if (dashIdx > 0) {
+    return { left: title.slice(0, dashIdx), right: title.slice(dashIdx + 3) };
+  }
+  const words = title.split(' ');
+  if (words.length <= 2) {
+    return { left: words[0], right: words.slice(1).join(' ') || '' };
+  }
+  const mid = Math.ceil(words.length / 2);
+  return { left: words.slice(0, mid).join(' '), right: words.slice(mid).join(' ') };
+}
+
 /* ═══════ STATE ═══════ */
 let currentView = 'slider';
 let currentFilter = 'all';
@@ -499,34 +537,37 @@ function renderSwiper() {
   const total = String(filtered.length).padStart(2,'0');
   filtered.forEach((p, i) => {
     const num = String(i+1).padStart(2,'0');
+    const { left, right } = splitTitle(p.t);
     const slide = document.createElement('div');
     slide.className = 'swiper-slide';
     slide.innerHTML = `
       <div class="slide-content">
-        <div class="slide-name">${italicizeTitle(p.t)}</div>
-        <div class="slide-play" data-idx="${i}">
-          <div class="overflow-hidden">
-            <div class="slide-play-inner">
-              <span class="slide-play-text"><span class="il">P</span>lay</span>
+        <div class="slide-name-left">${italicizeTitle(left)}</div>
+        <div class="slide-center">
+          <div class="slide-top">
+            <div class="overflow-hidden"><div class="slide-top-type"><span>${p.tp}</span></div></div>
+            <div class="slide-top-icons">
+              <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="currentColor" stroke-width=".5" opacity=".5"/><text x="8" y="11" text-anchor="middle" fill="currentColor" font-size="7" font-family="var(--mono)">V</text></svg>
+              <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="currentColor" stroke-width=".5" opacity=".5"/><text x="8" y="11" text-anchor="middle" fill="currentColor" font-size="8" font-family="var(--mono)">+</text></svg>
+            </div>
+            <div class="slide-top-cat">${catLabel(p.cat)}</div>
+          </div>
+          <div class="slide-play" data-idx="${i}">
+            <div class="overflow-hidden">
+              <div class="slide-play-inner">
+                <span class="slide-play-text"><span class="il">P</span>lay</span>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="slide-info">
-        <div class="slide-top">
-          <div class="overflow-hidden"><div class="slide-top-type"><span>${p.tp}</span></div></div>
-          <div class="slide-top-icons">
-            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="currentColor" stroke-width=".5" opacity=".5"/><text x="8" y="11" text-anchor="middle" fill="currentColor" font-size="7" font-family="var(--mono)">V</text></svg>
-            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="currentColor" stroke-width=".5" opacity=".5"/><text x="8" y="11" text-anchor="middle" fill="currentColor" font-size="8" font-family="var(--mono)">+</text></svg>
+          <div class="slide-bottom">
+            <div class="slide-bottom-left">
+              <div class="overflow-hidden"><div class="slide-num"><span>${num}.</span></div></div>
+              <div class="overflow-hidden"><div class="slide-client"><span>${p.c}</span></div></div>
+            </div>
+            <div class="slide-total">.${total}</div>
           </div>
         </div>
-        <div class="slide-bottom">
-          <div class="slide-bottom-left">
-            <div class="overflow-hidden"><div class="slide-num"><span>${num}.</span></div></div>
-            <div class="overflow-hidden"><div class="slide-client"><span>${p.c}</span></div></div>
-          </div>
-          <div class="slide-total">${total}</div>
-        </div>
+        <div class="slide-name-right">${italicizeTitle(right)}</div>
       </div>
     `;
     w.appendChild(slide);
@@ -569,7 +610,8 @@ function animateSlideIn(idx) {
   if (!slide) return;
 
   const tl = gsap.timeline();
-  tl.fromTo(slide.querySelector('.slide-name'), { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'mainEase' }, 0)
+  tl.fromTo(slide.querySelector('.slide-name-left'), { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'mainEase' }, 0)
+    .fromTo(slide.querySelector('.slide-name-right'), { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'mainEase' }, 0.05)
     .fromTo(slide.querySelector('.slide-play-inner'), { y: '110%' }, { y: '0%', duration: 0.6, ease: 'mainEase' }, 0.15)
     .fromTo(slide.querySelector('.slide-top-type span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.1)
     .fromTo(slide.querySelector('.slide-num span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.15)
@@ -690,7 +732,7 @@ function setView(view) {
   const sv = document.getElementById('swiper-view');
   const lv = document.getElementById('list-view');
 
-  document.querySelectorAll('.nav-view-btn, .option-item').forEach(b => {
+  document.querySelectorAll('.option-item').forEach(b => {
     b.classList.toggle('is--active', b.dataset.view === view);
   });
 
@@ -723,22 +765,9 @@ document.getElementById('filter-bar').addEventListener('click', e => {
   else renderList();
 });
 
-/* ═══════ MENU ═══════ */
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-let menuOpen = false;
-menuToggle.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  navMenu.classList.toggle('is--open', menuOpen);
-  menuToggle.textContent = menuOpen ? 'CLOSE' : 'MENU';
-});
-document.querySelectorAll('.nav-menu-link').forEach(l => {
-  l.addEventListener('click', e => {
-    e.preventDefault();
-    menuOpen = false;
-    navMenu.classList.remove('is--open');
-    menuToggle.textContent = 'MENU';
-  });
+/* ═══════ MENU (nav links) ═══════ */
+document.querySelectorAll('.nav-link-top').forEach(l => {
+  l.addEventListener('click', e => { e.preventDefault(); });
 });
 
 /* ═══════ CURSOR ═══════ */
