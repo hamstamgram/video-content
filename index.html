@@ -142,9 +142,9 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .bracket.tr{top:-1px;right:-1px}.bracket.tr::before{top:0;right:0;width:12px;height:1px}.bracket.tr::after{top:0;right:0;width:1px;height:12px}
 .bracket.bl{bottom:-1px;left:-1px}.bracket.bl::before{bottom:0;left:0;width:12px;height:1px}.bracket.bl::after{bottom:0;left:0;width:1px;height:12px}
 .bracket.br{bottom:-1px;right:-1px}.bracket.br::before{bottom:0;right:0;width:12px;height:1px}.bracket.br::after{bottom:0;right:0;width:1px;height:12px}
-/* Play block below preview */
-.slide-play{display:flex;align-items:flex-start;justify-content:center;padding-top:0.5rem;cursor:none;overflow:hidden}
-.slide-play-text{font-family:var(--serif);font-weight:200;font-size:clamp(2.4rem,4.5vw,4.5rem);color:var(--lemon);line-height:1}
+/* Play block overlaid on bottom half of preview */
+.slide-play{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:10.3vw;height:7rem;display:flex;align-items:center;justify-content:center;cursor:none;overflow:hidden}
+.slide-play-text{font-family:var(--serif);font-weight:200;font-size:clamp(2rem,3.8vw,3.8rem);color:var(--lemon);line-height:1}
 .slide-play-text .il{font-family:var(--serif-i);font-style:italic}
 .slide-play-inner{transform:translateY(0);transition:transform .6s var(--ease)}
 .slide-play:hover .slide-play-inner{transform:translateY(-5%)}
@@ -587,11 +587,11 @@ function renderSwiper() {
             </div>
             <div class="bracket tl"></div><div class="bracket tr"></div>
             <div class="bracket bl"></div><div class="bracket br"></div>
-          </div>
-          <div class="slide-play" data-idx="${i}">
-            <div class="overflow-hidden">
-              <div class="slide-play-inner">
-                <span class="slide-play-text"><span class="il">P</span>lay</span>
+            <div class="slide-play" data-idx="${i}">
+              <div class="overflow-hidden">
+                <div class="slide-play-inner">
+                  <span class="slide-play-text"><span class="il">P</span>lay</span>
+                </div>
               </div>
             </div>
           </div>
