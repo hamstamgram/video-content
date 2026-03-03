@@ -281,6 +281,46 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
   .nav-center{font-size:0.6rem}
 }
 
+/* ─── Transition Wipe (P1) ─────────────────────────────────── */
+.transition-wrapper{position:fixed;inset:0;z-index:10000;display:grid;grid-template-columns:50vw 50vw;pointer-events:none}
+.transition-block{background:var(--bg);height:0%;width:100%}
+.transition-block.is--left{align-self:start}
+.transition-block.is--right{align-self:end}
+
+/* ─── Video Hover Overlay (P0) ─────────────────────────────── */
+.video-hover-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease-out;z-index:6;pointer-events:none}
+.video-preview-wrapper:hover .video-hover-overlay{opacity:1}
+.video-hover-inner{display:flex;align-items:center;gap:0.5rem}
+.text-dot{width:6px;height:6px;border-radius:50%;background:var(--lemon);animation:fadePulse .6s ease-in-out infinite alternate}
+.video-hover-label{font-family:var(--sans);font-size:clamp(0.55rem,0.7vw,0.75rem);letter-spacing:0.1em;text-transform:uppercase;color:var(--lemon);font-weight:500}
+@keyframes fadePulse{0%{opacity:.4}100%{opacity:1}}
+
+/* ─── Film Grain Noise (P3) ─────────────────────────────────── */
+.noise-overlay{position:fixed;inset:0;z-index:10009;pointer-events:none;overflow:hidden}
+.noise-move{position:absolute;inset:-10%;width:120%;height:120%;background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1295275/background-noise.png") 0 0/200px repeat;mix-blend-mode:color-dodge;animation:noise .2s ease infinite;opacity:0.6}
+@keyframes noise{
+  0%,100%{background-position:0 0}
+  10%{background-position:-5% -10%}
+  20%{background-position:-15% 5%}
+  30%{background-position:7% -25%}
+  40%{background-position:20% 25%}
+  50%{background-position:-25% 10%}
+  60%{background-position:15% 5%}
+  70%{background-position:0% 15%}
+  80%{background-position:25% 35%}
+  90%{background-position:-10% 10%}
+}
+
+/* ─── Intro Overlay (P2) ─────────────────────────────────────── */
+.intro-overlay{position:fixed;inset:0;z-index:50001;background:var(--bg);display:flex;align-items:center;justify-content:center}
+.intro-brand{font-family:var(--serif);font-weight:200;font-size:clamp(3rem,8vw,7rem);color:var(--lemon);letter-spacing:-0.03em;white-space:nowrap;opacity:0}
+.intro-brand .il{font-family:var(--serif-i);font-style:italic}
+
+/* Center preview video */
+.video-preview-vid{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s;position:absolute;inset:0;z-index:1}
+.video-preview-wrapper:hover .video-preview-vid{opacity:0.5}
+.video-preview-wrapper:hover .video-preview-img{opacity:0}
+
 /* ─── Utilities ─────────────────────────────────────────────── */
 .overflow-hidden{overflow:hidden}
 </style>
@@ -293,6 +333,20 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
+
+<!-- Transition Wipe (P1) -->
+<div class="transition-wrapper" id="transition-wrapper">
+  <div class="transition-block is--left"></div>
+  <div class="transition-block is--right"></div>
+</div>
+
+<!-- Film Grain Noise (P3) -->
+<div class="noise-overlay"><div class="noise-move"></div></div>
+
+<!-- Intro Overlay (P2) -->
+<div class="intro-overlay" id="intro-overlay">
+  <div class="intro-brand" id="intro-brand"><span class="il">V</span>ideo <span class="il">C</span>ontent</div>
+</div>
 
 <!-- Cursor -->
 <div class="cursor" id="cursor"></div>
@@ -444,6 +498,12 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 </footer>
 
 <script>
+/* ═══════ REGISTER CUSTOM EASES EARLY ═══════ */
+if (typeof CustomEase !== 'undefined') {
+  CustomEase.create('mainEase', 'M0,0 C0.75,0 0,1 1,1');
+  CustomEase.create('transitionEase', 'M0,0 C0.75,0 0,1 1,1');
+}
+
 /* ══════════════════════════════════════════════════════════════
    PROJECT DATA
 ══════════════════════════════════════════════════════════════ */
@@ -581,9 +641,16 @@ function renderSwiper() {
             </div>
             <div class="slide-top-cat">${catLabel(p.cat)}</div>
           </div>
-          <div class="video-preview-wrapper">
+          <div class="video-preview-wrapper" data-hover-video="${p.h}">
             <div class="video-preview-box">
               <img src="${p.th}" alt="" class="video-preview-img" loading="lazy"/>
+              <video class="video-preview-vid" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="video-hover-overlay">
+              <div class="video-hover-inner">
+                <span class="text-dot"></span>
+                <span class="video-hover-label">Play Video</span>
+              </div>
             </div>
             <div class="bracket tl"></div><div class="bracket tr"></div>
             <div class="bracket bl"></div><div class="bracket br"></div>
@@ -615,13 +682,41 @@ function renderSwiper() {
   swiperInstance = new Swiper('#project-swiper', {
     direction: 'vertical',
     slidesPerView: 1,
-    speed: 800,
+    speed: 0,
     mousewheel: { sensitivity: 1 },
     keyboard: true,
+    allowTouchMove: true,
     on: {
-      slideChange(sw) { updateBgVideo(sw.activeIndex); animateSlideIn(sw.activeIndex); },
+      slideChangeTransitionStart(sw) {
+        if (isTransitioning) { return; }
+        doSlideTransition(sw.activeIndex);
+      },
       init(sw) { updateBgVideo(0); }
     }
+  });
+  initPreviewHovers();
+}
+
+/* ═══════ P0: PREVIEW VIDEO HOVER ═══════ */
+function initPreviewHovers() {
+  document.querySelectorAll('.video-preview-wrapper[data-hover-video]').forEach(wrapper => {
+    const vid = wrapper.querySelector('.video-preview-vid');
+    if (!vid || vid.dataset.hoverBound) return;
+    vid.dataset.hoverBound = 'true';
+    const src = wrapper.dataset.hoverVideo;
+
+    wrapper.addEventListener('mouseenter', () => {
+      if (!vid.src || vid.src === '') {
+        vid.src = src;
+        vid.load();
+      }
+      vid.play().catch(() => {});
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      vid.pause();
+      vid.currentTime = 0;
+    });
   });
 }
 
@@ -638,6 +733,64 @@ function updateBgVideo(idx) {
   prevEl.classList.remove('is--active');
   setTimeout(() => { prevEl.pause(); prevEl.src = ''; }, 600);
   bgActiveIdx = nextIdx;
+}
+
+/* ═══════ P1: BLACK WIPE TRANSITION ═══════ */
+let isTransitioning = false;
+let blockAlignState = 0; // alternates alignment each transition
+
+function doSlideTransition(idx) {
+  if (typeof gsap === 'undefined') {
+    updateBgVideo(idx);
+    animateSlideIn(idx);
+    return;
+  }
+
+  const blocks = document.querySelectorAll('.transition-block');
+  if (!blocks.length || isTransitioning) {
+    updateBgVideo(idx);
+    animateSlideIn(idx);
+    return;
+  }
+
+  isTransitioning = true;
+  if (swiperInstance) swiperInstance.disable();
+  const dur = 1.35;
+
+  // Set alignment: alternate which side grows from
+  blocks.forEach((b, i) => {
+    const fromTop = (blockAlignState + i) % 2 === 0;
+    b.style.alignSelf = fromTop ? 'start' : 'end';
+  });
+
+  const tl = gsap.timeline({
+    onComplete: () => {
+      isTransitioning = false;
+      if (swiperInstance) swiperInstance.enable();
+    }
+  });
+
+  // Phase 1: wipe in (cover screen)
+  tl.fromTo(blocks, { height: '0%' }, {
+    height: '100%', duration: dur * 0.5, ease: 'transitionEase', stagger: 0.03
+  })
+  // At midpoint: swap content
+  .call(() => {
+    updateBgVideo(idx);
+    // Flip alignment for reveal
+    blocks.forEach((b, i) => {
+      const fromTop = (blockAlignState + i) % 2 === 0;
+      b.style.alignSelf = fromTop ? 'end' : 'start';
+    });
+  })
+  // Phase 2: wipe out (reveal new slide)
+  .fromTo(blocks, { height: '100%' }, {
+    height: '0%', duration: dur * 0.5, ease: 'transitionEase', stagger: 0.03
+  }, '+=0.05')
+  .call(() => {
+    animateSlideIn(idx);
+    blockAlignState = (blockAlignState + 1) % 2;
+  });
 }
 
 /* ═══════ SLIDE ANIMATIONS ═══════ */
@@ -834,12 +987,14 @@ document.querySelectorAll('.nav-link-top').forEach(l => {
   })();
 })();
 
-/* ═══════ PRELOADER ═══════ */
+/* ═══════ PRELOADER + INTRO (P2) ═══════ */
 (function runPreloader() {
   const pre = document.getElementById('preloader');
   const text = document.getElementById('preloader-text');
   const counter = document.getElementById('preloader-counter');
   const name = document.getElementById('preloader-name');
+  const intro = document.getElementById('intro-overlay');
+  const brand = document.getElementById('intro-brand');
   let count = 0;
 
   setTimeout(() => text.classList.add('is--reveal'), 200);
@@ -852,22 +1007,52 @@ document.querySelectorAll('.nav-link-top').forEach(l => {
       clearInterval(countInterval);
       setTimeout(() => name.classList.add('is--reveal'), 200);
       setTimeout(() => {
+        // Hide preloader, reveal intro brand overlay
         pre.classList.add('is--done');
         setTimeout(() => {
           pre.style.display = 'none';
-          initGSAP();
+          runIntroAnimation();
         }, 800);
       }, 1200);
     }
   }, 80);
+
+  function runIntroAnimation() {
+    if (typeof gsap === 'undefined') {
+      intro.style.display = 'none';
+      initGSAP();
+      return;
+    }
+
+    const itl = gsap.timeline({
+      onComplete: () => {
+        intro.style.display = 'none';
+        initGSAP();
+      }
+    });
+
+    // Phase 1: fade in brand name centered
+    itl.to(brand, { opacity: 1, duration: 0.6, ease: 'power2.out' })
+    // Phase 2: hold for a beat
+    .to({}, { duration: 0.6 })
+    // Phase 3: scale down and split — brand shrinks while overlay fades
+    .to(brand, {
+      scale: 0.4,
+      opacity: 0,
+      duration: 1,
+      ease: 'mainEase'
+    })
+    .to(intro, {
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.inOut'
+    }, '-=0.7');
+  }
 })();
 
 /* ═══════ GSAP INIT ═══════ */
 function initGSAP() {
   if (typeof gsap === 'undefined') return;
-  if (typeof CustomEase !== 'undefined') {
-    CustomEase.create('mainEase', 'M0,0 C0.75,0 0,1 1,1');
-  }
   gsap.from('.navbar', { opacity: 0, y: -15, duration: 0.6, ease: 'mainEase', delay: 0.1 });
   gsap.from('.site-footer', { opacity: 0, y: 15, duration: 0.6, ease: 'mainEase', delay: 0.15 });
   gsap.from('.decor-rulers', { opacity: 0, duration: 1, delay: 0.3 });
