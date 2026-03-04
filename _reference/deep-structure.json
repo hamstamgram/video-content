@@ -1,0 +1,4693 @@
+{
+  "bgVideo": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "styles": {
+      "position": "absolute",
+      "display": "block",
+      "opacity": "1",
+      "width": "1440px",
+      "height": "900px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "2",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "auto",
+      "overflow": "clip",
+      "objectFit": "cover"
+    },
+    "src": "",
+    "tagName": "VIDEO"
+  },
+  "bgBlock": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "styles": {
+      "position": "absolute",
+      "display": "flex",
+      "opacity": "1",
+      "width": "1440px",
+      "height": "900px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "1",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "auto",
+      "overflow": "visible",
+      "objectFit": "fill"
+    }
+  },
+  "hoverWrap": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "styles": {
+      "position": "absolute",
+      "display": "flex",
+      "opacity": "1",
+      "width": "1440px",
+      "height": "900px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "10",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "auto",
+      "overflow": "hidden",
+      "objectFit": "fill"
+    }
+  },
+  "hoverInner": {
+    "rect": {
+      "x": 689,
+      "y": 443,
+      "w": 61,
+      "h": 14
+    },
+    "styles": {
+      "position": "absolute",
+      "display": "flex",
+      "opacity": "1",
+      "width": "61.1406px",
+      "height": "14px",
+      "top": "154.797px",
+      "left": "246.953px",
+      "zIndex": "auto",
+      "transform": "matrix(1, 0, 0, 1, -30.5703, -7)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "none",
+      "overflow": "visible",
+      "objectFit": "fill"
+    },
+    "html": "<div class=\"text-dot\"></div><div class=\"overflow-hidden\"><div data-inner=\"\" class=\"text-medium is--relative\" style=\"position: relative; display: inline-block; overflow: hidden;\"><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: none; transform: translateY(-100%);\">p</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transiti"
+  },
+  "spacer": {
+    "rect": {
+      "x": 473,
+      "y": 295,
+      "w": 494,
+      "h": 310
+    },
+    "styles": {
+      "position": "relative",
+      "display": "block",
+      "opacity": "1",
+      "width": "493.906px",
+      "height": "309.594px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "auto",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "auto",
+      "overflow": "hidden",
+      "objectFit": "fill"
+    }
+  },
+  "transWrap": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "styles": {
+      "position": "fixed",
+      "display": "grid",
+      "opacity": "1",
+      "width": "1440px",
+      "height": "900px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "10000",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "none",
+      "overflow": "visible",
+      "objectFit": "fill"
+    },
+    "html": "<div id=\"w-node-_33cb4309-eab0-0b09-cf6d-de412f44e9ef-2f44e9ee\" class=\"transition-block\" style=\"height: 0%; align-self: flex-start;\"></div><div id=\"w-node-_33cb4309-eab0-0b09-cf6d-de412f44e9f0-2f44e9ee\" class=\"transition-block\" style=\"height: 0%; align-self: flex-end;\"></div>"
+  },
+  "transBlocks": [
+    {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 720,
+        "h": 0
+      },
+      "styles": {
+        "position": "relative",
+        "display": "block",
+        "opacity": "1",
+        "width": "720px",
+        "height": "0px",
+        "top": "0px",
+        "left": "0px",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      }
+    },
+    {
+      "rect": {
+        "x": 720,
+        "y": 900,
+        "w": 720,
+        "h": 0
+      },
+      "styles": {
+        "position": "relative",
+        "display": "block",
+        "opacity": "1",
+        "width": "720px",
+        "height": "0px",
+        "top": "0px",
+        "left": "0px",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      }
+    }
+  ],
+  "noise": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "styles": {
+      "position": "fixed",
+      "display": "block",
+      "opacity": "1",
+      "width": "1440px",
+      "height": "900px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "auto",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "color-dodge",
+      "pointerEvents": "none",
+      "overflow": "visible",
+      "objectFit": "fill"
+    },
+    "className": "noise-animation w-embed"
+  },
+  "previewTop": {
+    "rect": {
+      "x": 592,
+      "y": 0,
+      "w": 256,
+      "h": 144
+    },
+    "styles": {
+      "position": "relative",
+      "display": "block",
+      "opacity": "1",
+      "width": "256.312px",
+      "height": "144px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "200",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "auto",
+      "overflow": "hidden",
+      "objectFit": "cover"
+    }
+  },
+  "previewBottom": {
+    "rect": {
+      "x": 592,
+      "y": 756,
+      "w": 256,
+      "h": 144
+    },
+    "styles": {
+      "position": "relative",
+      "display": "block",
+      "opacity": "1",
+      "width": "256.312px",
+      "height": "144px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "200",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "auto",
+      "overflow": "hidden",
+      "objectFit": "cover"
+    }
+  },
+  "miniPreview": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+    },
+    "styles": {
+      "position": "absolute",
+      "display": "block",
+      "opacity": "1",
+      "width": "400px",
+      "height": "267px",
+      "top": "auto",
+      "left": "auto",
+      "zIndex": "10002",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "none",
+      "overflow": "visible",
+      "objectFit": "fill"
+    },
+    "className": "screensaver-item"
+  },
+  "timer": {
+    "rect": null,
+    "styles": null
+  },
+  "decors": [
+    {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "styles": {
+        "position": "fixed",
+        "display": "flex",
+        "opacity": "1",
+        "width": "1440px",
+        "height": "900px",
+        "top": "0px",
+        "left": "0px",
+        "zIndex": "10005",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "screen",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "fill"
+      },
+      "className": "background-decor"
+    },
+    {
+      "rect": {
+        "x": 478,
+        "y": 1728,
+        "w": 7,
+        "h": 900
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "900px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 1728)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "decor-numbers is--left"
+    },
+    {
+      "rect": {
+        "x": 478,
+        "y": -26148,
+        "w": 7,
+        "h": 28776
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "28775.9px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "decor-inner"
+    },
+    {
+      "rect": {
+        "x": 478,
+        "y": 8383,
+        "w": 7,
+        "h": 5755
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "5755.19px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 11510.4)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "text-decor"
+    },
+    {
+      "rect": {
+        "x": 478,
+        "y": 2628,
+        "w": 7,
+        "h": 5755
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "5755.19px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 11510.4)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "text-decor"
+    },
+    {
+      "rect": {
+        "x": 478,
+        "y": -3127,
+        "w": 7,
+        "h": 5755
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "5755.19px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 11510.4)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "text-decor"
+    },
+    {
+      "rect": {
+        "x": 478,
+        "y": -8882,
+        "w": 7,
+        "h": 5755
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "5755.19px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 11510.4)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "text-decor"
+    },
+    {
+      "rect": {
+        "x": 478,
+        "y": -14638,
+        "w": 7,
+        "h": 5755
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "5755.19px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 11510.4)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "text-decor"
+    },
+    {
+      "rect": {
+        "x": 955,
+        "y": -1728,
+        "w": 7,
+        "h": 900
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "900px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, -1728)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "decor-numbers is--right"
+    },
+    {
+      "rect": {
+        "x": 955,
+        "y": -1728,
+        "w": 7,
+        "h": 28776
+      },
+      "styles": {
+        "position": "static",
+        "display": "flex",
+        "opacity": "1",
+        "width": "7.20312px",
+        "height": "28775.9px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "visible",
+        "objectFit": "fill"
+      },
+      "className": "decor-inner"
+    }
+  ],
+  "videoDecor": {
+    "rect": null,
+    "styles": null
+  },
+  "playBlock": {
+    "rect": {
+      "x": 645,
+      "y": 510,
+      "w": 149,
+      "h": 101
+    },
+    "styles": {
+      "position": "static",
+      "display": "flex",
+      "opacity": "1",
+      "width": "149.328px",
+      "height": "100.75px",
+      "top": "auto",
+      "left": "auto",
+      "zIndex": "auto",
+      "transform": "matrix(1, 0, 0, 1, 0, 110.825)",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "auto",
+      "overflow": "hidden",
+      "objectFit": "fill"
+    },
+    "html": "<div class=\"char-block\"><div class=\"play-text\">P</div><div class=\"play-text has--style-italic\">P</div></div><div class=\"play-text\">lay</div>"
+  },
+  "preloader": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 0
+    },
+    "styles": {
+      "position": "static",
+      "display": "flex",
+      "opacity": "1",
+      "width": "1440px",
+      "height": "0px",
+      "top": "auto",
+      "left": "auto",
+      "zIndex": "auto",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "none",
+      "overflow": "visible",
+      "objectFit": "fill"
+    },
+    "className": "preloader-container"
+  },
+  "screensaver": {
+    "rect": null,
+    "styles": null
+  },
+  "allVideos": [
+    {
+      "className": "background-project-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "1440px",
+        "height": "900px",
+        "top": "0px",
+        "left": "0px",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "poster": ""
+    },
+    {
+      "className": "background-project-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "1440px",
+        "height": "900px",
+        "top": "0px",
+        "left": "0px",
+        "zIndex": "1",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "player-video",
+      "src": "",
+      "rect": {
+        "x": -18,
+        "y": -11,
+        "w": 1476,
+        "h": 923
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "1440px",
+        "height": "900px",
+        "top": "-295.203px",
+        "left": "-473.047px",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "poster": ""
+    },
+    {
+      "className": "player-video",
+      "src": "",
+      "rect": {
+        "x": -18,
+        "y": -11,
+        "w": 1476,
+        "h": 923
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "1440px",
+        "height": "900px",
+        "top": "-295.203px",
+        "left": "-473.047px",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "player-video-poster is--preview-left",
+      "src": "",
+      "rect": {
+        "x": -535,
+        "y": 310,
+        "w": 502,
+        "h": 280
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "489.594px",
+        "height": "273.594px",
+        "top": "313.203px",
+        "left": "-504px",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "hidden",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "player-video-poster",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "none",
+        "opacity": "1",
+        "width": "1440px",
+        "height": "900px",
+        "top": "auto",
+        "left": "0px",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "hidden",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "player-video-poster is--preview-right",
+      "src": "",
+      "rect": {
+        "x": 1488,
+        "y": 310,
+        "w": 502,
+        "h": 280
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "489.594px",
+        "height": "273.594px",
+        "top": "313.203px",
+        "left": "1468.8px",
+        "zIndex": "auto",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "hidden",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--prev",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 0,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "preview-video is--next",
+      "src": "",
+      "rect": {
+        "x": 592,
+        "y": 756,
+        "w": 256,
+        "h": 144
+      },
+      "styles": {
+        "position": "static",
+        "display": "inline-block",
+        "opacity": "1",
+        "width": "256.312px",
+        "height": "144px",
+        "top": "auto",
+        "left": "auto",
+        "zIndex": "auto",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "auto",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "list-video",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "block",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0%",
+        "left": "0%",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "poster": ""
+    },
+    {
+      "className": "",
+      "src": "",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "styles": {
+        "position": "absolute",
+        "display": "none",
+        "opacity": "1",
+        "width": "100%",
+        "height": "100%",
+        "top": "0px",
+        "left": "0px",
+        "zIndex": "2",
+        "transform": "none",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "mixBlendMode": "normal",
+        "pointerEvents": "none",
+        "overflow": "clip",
+        "objectFit": "cover"
+      },
+      "autoplay": false,
+      "loop": true,
+      "muted": true,
+      "poster": ""
+    }
+  ],
+  "projContent": {
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    "styles": {
+      "position": "absolute",
+      "display": "grid",
+      "opacity": "1",
+      "width": "1440px",
+      "height": "900px",
+      "top": "0px",
+      "left": "0px",
+      "zIndex": "11",
+      "transform": "none",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "mixBlendMode": "normal",
+      "pointerEvents": "none",
+      "overflow": "visible",
+      "objectFit": "fill"
+    }
+  },
+  "bottomRight": [
+    {
+      "tag": "DIV",
+      "className": "filter-wrapper w-form",
+      "rect": {
+        "x": 1083,
+        "y": 823,
+        "w": 146,
+        "h": 57
+      },
+      "text": "RadioAll (42)Alltv-filmTV & FILM(19)TV & FILMcomme"
+    },
+    {
+      "tag": "FORM",
+      "className": "filter-block",
+      "rect": {
+        "x": 1083,
+        "y": 823,
+        "w": 146,
+        "h": 57
+      },
+      "text": "RadioAll (42)Alltv-filmTV & FILM(19)TV & FILMcomme"
+    },
+    {
+      "tag": "DIV",
+      "className": "creator-inner",
+      "rect": {
+        "x": 1305,
+        "y": 825,
+        "w": 115,
+        "h": 55
+      },
+      "text": "BL/S®BL/S®artycodersartycodersSerhii polyvanyiSerh"
+    }
+  ]
+}

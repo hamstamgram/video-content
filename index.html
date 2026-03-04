@@ -40,7 +40,7 @@
 /* ─── Reset ─────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;-webkit-text-size-adjust:100%;height:100%}
-body{background:var(--bg);color:var(--lemon);font-family:var(--sans);font-weight:400;line-height:1;overflow-x:hidden;height:100%;cursor:none}
+body{background:var(--bg);color:var(--lemon);font-family:var(--sans);font-weight:400;line-height:1;overflow:hidden;height:100%;cursor:none}
 a{color:inherit;text-decoration:none}
 img,video{display:block;max-width:100%}
 button{background:none;border:none;cursor:none;color:inherit;font:inherit}
@@ -61,6 +61,15 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .preloader-counter-inner{transition:transform .3s var(--ease)}
 .preloader-name{font-family:var(--serif);font-weight:200;font-size:clamp(2.5rem,7vw,6rem);color:var(--lemon);letter-spacing:-0.03em;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s var(--ease)}
 .preloader-name.is--reveal{opacity:1;transform:translateY(0)}
+
+/* Preloader corner thumbnails */
+.preloader-corner{position:fixed;z-index:50001;overflow:hidden;opacity:0;transition:opacity .3s ease-out}
+.preloader-corner img{width:100%;height:100%;object-fit:cover}
+.preloader-corner.is--tl{top:0;left:0;width:200px;height:130px}
+.preloader-corner.is--tr{top:0;right:0;width:200px;height:130px}
+.preloader-corner.is--bl{bottom:0;left:0;width:200px;height:130px}
+.preloader-corner.is--br{bottom:0;right:0;width:200px;height:130px}
+.preloader-corner.is--flash{opacity:1}
 
 /* ─── Film Ruler Decor ──────────────────────────────────────── */
 .decor-rulers{position:fixed;inset:0;z-index:10005;pointer-events:none;display:flex;justify-content:space-between;padding:0 6px}
@@ -84,12 +93,9 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .nav-view-btn{color:var(--dimmer);cursor:none;transition:color .3s;font-weight:500;font-size:inherit;letter-spacing:inherit;text-transform:inherit;font-family:inherit}
 .nav-view-btn.is--active{color:var(--lemon)}
 .nav-view-btn:hover{color:var(--lemon)}
-.nav-right-block{display:flex;align-items:center}
-.nav-menu-btn{font-family:var(--sans);font-weight:500;font-size:clamp(0.6rem,0.7vw,0.75rem);letter-spacing:0.05em;text-transform:uppercase;color:var(--lemon);cursor:none}
 .nav-right-block{display:flex;align-items:flex-start;gap:2rem}
-.nav-col{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.nav-col{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:relative}
 .nav-dot-active{width:4px;height:4px;border-radius:50%;background:var(--lemon);position:absolute;left:-10px;top:4px}
-.nav-col{position:relative}
 .nav-link-top{font-family:var(--sans);font-weight:400;font-size:clamp(0.55rem,0.65vw,0.7rem);letter-spacing:0.03em;text-transform:uppercase;color:var(--lemon);cursor:none;transition:color .3s}
 .nav-link-top.is--dim{color:var(--dimmer)}
 .nav-link-top.is--bold{font-weight:500}
@@ -108,16 +114,18 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 /* ─── Background Block ──────────────────────────────────────── */
 .bg-block{position:fixed;inset:0;z-index:1;overflow:hidden;background:var(--bg)}
 .bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
-.bg-video.is--active{opacity:0.45}
+.bg-video.is--active{opacity:0.7}
 
 /* ─── Main Container ────────────────────────────────────────── */
 .page-main{position:relative;z-index:2;height:100vh;overflow:hidden}
 
-/* ─── Swiper View (Default) ─────────────────────────────────── */
-.swiper-view{position:absolute;inset:0;z-index:2}
-.swiper-view.is--hidden{display:none}
-.project-swiper{width:100%;height:100%}
-.swiper-slide{position:relative;width:100%;height:100%;overflow:hidden}
+/* ─── Slider View (GSAP Observer) ───────────────────────────── */
+.slider-view{position:absolute;inset:0;z-index:2}
+.slider-view.is--hidden{display:none}
+
+/* Individual slide */
+.slide{position:absolute;inset:0;opacity:0;pointer-events:none;z-index:1}
+.slide.is--active{opacity:1;pointer-events:all;z-index:2}
 
 /* Slide content — 3-column grid matching original */
 .slide-content{position:absolute;inset:0;display:grid;grid-template-columns:1fr 34.3% 1fr;grid-template-rows:100%;align-items:center;justify-content:center;z-index:5;padding:0;gap:4px}
@@ -131,7 +139,7 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .slide-center{display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;height:40vh;align-self:center}
 
 /* Video preview box in center — transparent zone, bg video shows through */
-.video-preview-wrapper{position:relative;width:100%;aspect-ratio:494/310;flex-shrink:0}
+.video-preview-wrapper{position:relative;width:100%;aspect-ratio:494/310;flex-shrink:0;cursor:none}
 .video-preview-box{width:100%;height:100%;overflow:hidden;position:relative;background:transparent}
 /* Corner brackets */
 .bracket{position:absolute;width:12px;height:12px;pointer-events:none}
@@ -140,12 +148,11 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .bracket.tr{top:-1px;right:-1px}.bracket.tr::before{top:0;right:0;width:12px;height:1px}.bracket.tr::after{top:0;right:0;width:1px;height:12px}
 .bracket.bl{bottom:-1px;left:-1px}.bracket.bl::before{bottom:0;left:0;width:12px;height:1px}.bracket.bl::after{bottom:0;left:0;width:1px;height:12px}
 .bracket.br{bottom:-1px;right:-1px}.bracket.br::before{bottom:0;right:0;width:12px;height:1px}.bracket.br::after{bottom:0;right:0;width:1px;height:12px}
-/* Play block overlaid on bottom half of preview */
-.slide-play{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:10.3vw;height:7rem;display:flex;align-items:center;justify-content:center;cursor:none;overflow:hidden}
-.slide-play-text{font-family:var(--serif);font-weight:200;font-size:clamp(2rem,3.8vw,3.8rem);color:var(--lemon);line-height:1}
-.slide-play-text .il{font-family:var(--serif-i);font-style:italic}
-.slide-play-inner{transform:translateY(0);transition:transform .6s var(--ease)}
-.slide-play:hover .slide-play-inner{transform:translateY(-5%)}
+
+/* Play Video label — centered in preview box, sans-serif */
+.slide-play-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.5rem;cursor:none;z-index:6}
+.play-dot{width:6px;height:6px;border-radius:50%;background:var(--lemon);flex-shrink:0}
+.play-text{font-family:var(--sans);font-weight:500;font-size:clamp(0.6rem,0.75vw,0.8rem);letter-spacing:0.08em;text-transform:uppercase;color:var(--lemon)}
 
 /* Project info top/bottom in center column */
 .slide-top{display:flex;align-items:center;justify-content:space-between;gap:0.8rem}
@@ -168,19 +175,13 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .adj-preview.is--bottom{bottom:-72%;height:85%}
 .adj-preview img{width:100%;height:100%;object-fit:cover;opacity:0.35}
 
-/* PREV / NEXT edge zones */
-.slide-nav-zone{position:absolute;top:0;bottom:0;width:15vw;z-index:8;display:flex;align-items:center;cursor:none;pointer-events:all}
-.slide-nav-zone.is--prev{left:0;padding-left:20px;justify-content:flex-start}
-.slide-nav-zone.is--next{right:0;padding-right:20px;justify-content:flex-end}
-.slide-nav-label{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dimmer);opacity:0;transition:opacity .3s;writing-mode:vertical-lr}
-.slide-nav-zone:hover .slide-nav-label{opacity:1}
-
-/* Preview wrapper (prev/next videos on edges) */
-.preview-block{position:absolute;top:0;bottom:0;width:20vw;z-index:4;overflow:hidden}
-.preview-block.is--prev{left:0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
-.preview-block.is--next{right:0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
-.preview-block video{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
-.slide-nav-zone:hover ~ .preview-block video{opacity:0.3}
+/* ─── Video Hover Overlay ─────────────────────────────────── */
+.video-hover-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease-out;z-index:7;pointer-events:none}
+.video-preview-wrapper:hover .video-hover-overlay{opacity:1}
+.video-hover-inner{display:flex;align-items:center;gap:0.5rem}
+.text-dot{width:6px;height:6px;border-radius:50%;background:var(--lemon);animation:fadePulse .6s ease-in-out infinite alternate}
+.video-hover-label{font-family:var(--sans);font-size:clamp(0.55rem,0.7vw,0.75rem);letter-spacing:0.1em;text-transform:uppercase;color:var(--lemon);font-weight:500}
+@keyframes fadePulse{0%{opacity:.4}100%{opacity:1}}
 
 /* ─── Video Player (Full-screen) ────────────────────────────── */
 .player{position:fixed;inset:0;z-index:20000;background:var(--bg);opacity:0;pointer-events:none;transition:opacity .5s var(--ease);display:flex;flex-direction:column}
@@ -201,7 +202,7 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .player-loop{width:5px;height:5px;border-radius:50%;background:var(--lemon);opacity:0.5;cursor:none;position:absolute;right:20px;bottom:20px}
 .player-loop.is--active{opacity:1}
 
-/* Player side navigation (project name overlay) — matched to original */
+/* Player side navigation (project name overlay) */
 .player-title{position:absolute;bottom:24px;left:20px;z-index:3}
 .player-title-name{font-family:var(--serif);font-weight:200;font-size:clamp(1.2rem,2.2vw,2.4rem);letter-spacing:-0.02em;color:var(--lemon);line-height:1.15}
 .player-title-name .il{font-family:var(--serif-i);font-style:italic}
@@ -270,8 +271,6 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
   .slide-content{grid-template-columns:1fr;grid-template-rows:auto;padding:60px 20px;gap:1rem;align-content:center}
   .slide-name-left,.slide-name-right{font-size:clamp(1.8rem,8vw,2.8rem);text-align:center}
   .slide-center{height:auto;gap:1rem}
-  .slide-nav-zone{width:20vw}
-  .preview-block{display:none}
   .list-video-container{width:100px;height:56px}
   .project-grid{padding:14px 8px 14px 15px;min-height:100px}
   .name-medium{font-size:clamp(0.9rem,3.5vw,1.1rem)}
@@ -279,21 +278,13 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
   .nav-center{font-size:0.6rem}
 }
 
-/* ─── Transition Wipe (P1) ─────────────────────────────────── */
+/* ─── Transition Wipe (NAV ONLY) ───────────────────────────── */
 .transition-wrapper{position:fixed;inset:0;z-index:10000;display:grid;grid-template-columns:50vw 50vw;pointer-events:none}
 .transition-block{background:var(--bg);height:0%;width:100%}
 .transition-block.is--left{align-self:start}
 .transition-block.is--right{align-self:end}
 
-/* ─── Video Hover Overlay (P0) ─────────────────────────────── */
-.video-hover-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease-out;z-index:6;pointer-events:none}
-.video-preview-wrapper:hover .video-hover-overlay{opacity:1}
-.video-hover-inner{display:flex;align-items:center;gap:0.5rem}
-.text-dot{width:6px;height:6px;border-radius:50%;background:var(--lemon);animation:fadePulse .6s ease-in-out infinite alternate}
-.video-hover-label{font-family:var(--sans);font-size:clamp(0.55rem,0.7vw,0.75rem);letter-spacing:0.1em;text-transform:uppercase;color:var(--lemon);font-weight:500}
-@keyframes fadePulse{0%{opacity:.4}100%{opacity:1}}
-
-/* ─── Film Grain Noise (P3) ─────────────────────────────────── */
+/* ─── Film Grain Noise ──────────────────────────────────────── */
 .noise-overlay{position:fixed;inset:0;z-index:10009;pointer-events:none;overflow:hidden}
 .noise-move{position:absolute;inset:-10%;width:120%;height:120%;background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1295275/background-noise.png") 0 0/200px repeat;mix-blend-mode:color-dodge;animation:noise .2s ease infinite;opacity:0.6}
 @keyframes noise{
@@ -308,20 +299,6 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
   80%{background-position:25% 35%}
   90%{background-position:-10% 10%}
 }
-
-/* ─── Intro Overlay (P2) ─────────────────────────────────────── */
-.intro-overlay{position:fixed;inset:0;z-index:50001;background:var(--bg);display:flex;align-items:center;justify-content:center}
-.intro-brand{font-family:var(--serif);font-weight:200;font-size:clamp(3rem,8vw,7rem);color:var(--lemon);letter-spacing:-0.03em;white-space:nowrap;opacity:0}
-.intro-brand .il{font-family:var(--serif-i);font-style:italic}
-.intro-left,.intro-right{display:inline-block}
-
-/* Center preview is transparent — no video/img needed */
-
-/* ─── Mini Preview Widget (bottom-right) ───────────────────── */
-.mini-preview{position:fixed;bottom:50px;right:20px;width:120px;height:80px;z-index:9998;overflow:hidden;pointer-events:none;opacity:0.6}
-.mini-preview img{width:100%;height:100%;object-fit:cover}
-.mini-preview-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3)}
-.mini-preview-name{font-family:var(--mono);font-size:7px;color:var(--lemon);letter-spacing:0.05em;text-transform:uppercase;text-align:center;line-height:1.4;opacity:0.8}
 
 /* ─── Center Column Tick Marks ─────────────────────────────── */
 .tick-marks{position:fixed;inset:0;z-index:3;pointer-events:none}
@@ -342,33 +319,18 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 <!-- GSAP + Plugins -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
-<!-- Swiper -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
 </head>
 <body>
 
-<!-- Transition Wipe (P1) -->
+<!-- Transition Wipe (NAV ONLY) -->
 <div class="transition-wrapper" id="transition-wrapper">
   <div class="transition-block is--left"></div>
   <div class="transition-block is--right"></div>
 </div>
 
-<!-- Film Grain Noise (P3) -->
+<!-- Film Grain Noise -->
 <div class="noise-overlay"><div class="noise-move"></div></div>
-
-<!-- Intro Overlay (P2) -->
-<div class="intro-overlay" id="intro-overlay">
-  <div class="intro-brand" id="intro-brand"><span class="intro-left"><span class="il">V</span>ideo</span><span class="intro-right"><span class="il">C</span>ontent</span></div>
-</div>
-
-<!-- Mini Preview Widget -->
-<div class="mini-preview" id="mini-preview">
-  <img id="mini-preview-img" src="" alt="">
-  <div class="mini-preview-overlay">
-    <div class="mini-preview-name" id="mini-preview-name"></div>
-  </div>
-</div>
 
 <!-- Center Column Tick Marks -->
 <div class="tick-marks">
@@ -392,6 +354,12 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
     <span class="il">V</span>ideo <span class="il">C</span>ontent
   </div>
 </div>
+
+<!-- Preloader corner thumbnails -->
+<div class="preloader-corner is--tl" id="corner-tl"><img src="" alt=""></div>
+<div class="preloader-corner is--tr" id="corner-tr"><img src="" alt=""></div>
+<div class="preloader-corner is--bl" id="corner-bl"><img src="" alt=""></div>
+<div class="preloader-corner is--br" id="corner-br"><img src="" alt=""></div>
 
 <!-- Film Ruler Decor (left + right edges) -->
 <div class="decor-rulers">
@@ -443,11 +411,9 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 
 <!-- Main Content -->
 <main class="page-main" id="page-main">
-  <!-- Swiper View (DEFAULT) -->
-  <div class="swiper-view" id="swiper-view">
-    <div class="swiper project-swiper" id="project-swiper">
-      <div class="swiper-wrapper" id="swiper-wrapper"></div>
-    </div>
+  <!-- Slider View (GSAP Observer) -->
+  <div class="slider-view" id="slider-view">
+    <div id="slides-container"></div>
   </div>
 
   <!-- List View -->
@@ -606,9 +572,7 @@ function catLabel(c) {
   return {'tv-film':'TV & Film','commercial':'Commercial','editorial':'Editorial'}[c] || c;
 }
 
-/* Split title into left (right-aligned) and right (left-aligned) halves */
 function splitTitle(title) {
-  // Handle hyphenated titles like "Noted - Alicia Keys" or "Life's a Trip"
   const dashIdx = title.indexOf(' - ');
   if (dashIdx > 0) {
     return { left: title.slice(0, dashIdx), right: title.slice(dashIdx + 3) };
@@ -624,9 +588,10 @@ function splitTitle(title) {
 /* ═══════ STATE ═══════ */
 let currentView = 'slider';
 let currentFilter = 'all';
-let swiperInstance = null;
 let filtered = [...P];
 let bgActiveIdx = 1;
+let currentSlide = 0;
+let isAnimating = false;
 
 /* ═══════ FILM RULER ═══════ */
 (function initRulers() {
@@ -650,17 +615,6 @@ let bgActiveIdx = 1;
   });
 })();
 
-/* ═══════ MINI PREVIEW ═══════ */
-function updateMiniPreview(idx) {
-  const p = filtered[idx];
-  if (!p) return;
-  const img = document.getElementById('mini-preview-img');
-  const name = document.getElementById('mini-preview-name');
-  img.src = p.th;
-  const { left, right } = splitTitle(p.t);
-  name.textContent = left + ' / ' + right;
-}
-
 /* ═══════ CLOCK — elapsed since page load ═══════ */
 (function initClock() {
   const start = Date.now();
@@ -675,16 +629,18 @@ function updateMiniPreview(idx) {
   tick(); setInterval(tick, 1000);
 })();
 
-/* ═══════ RENDER SWIPER ═══════ */
-function renderSwiper() {
-  const w = document.getElementById('swiper-wrapper');
-  w.innerHTML = '';
+/* ═══════ RENDER SLIDES (GSAP Observer) ═══════ */
+function renderSlides() {
+  const container = document.getElementById('slides-container');
+  container.innerHTML = '';
   const total = String(filtered.length).padStart(2,'0');
+
   filtered.forEach((p, i) => {
     const num = String(i+1).padStart(2,'0');
     const { left, right } = splitTitle(p.t);
     const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
+    slide.className = 'slide' + (i === 0 ? ' is--active' : '');
+    slide.dataset.idx = i;
     slide.innerHTML = `
       <div class="slide-content">
         <div class="slide-name-left">${italicizeTitle(left)}</div>
@@ -698,23 +654,14 @@ function renderSwiper() {
             </div>
             <div class="slide-top-cat">${catLabel(p.cat)}</div>
           </div>
-          <div class="video-preview-wrapper">
+          <div class="video-preview-wrapper" data-play-idx="${i}">
             <div class="video-preview-box"></div>
-            <div class="video-hover-overlay">
-              <div class="video-hover-inner">
-                <span class="text-dot"></span>
-                <span class="video-hover-label">Play Video</span>
-              </div>
+            <div class="slide-play-label">
+              <span class="play-dot"></span>
+              <span class="play-text">PLAY VIDEO</span>
             </div>
             <div class="bracket tl"></div><div class="bracket tr"></div>
             <div class="bracket bl"></div><div class="bracket br"></div>
-            <div class="slide-play" data-idx="${i}">
-              <div class="overflow-hidden">
-                <div class="slide-play-inner">
-                  <span class="slide-play-text"><span class="il">P</span>lay</span>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="slide-bottom">
             <div class="slide-bottom-left">
@@ -729,29 +676,93 @@ function renderSwiper() {
       <div class="adj-preview is--top"><img src="${filtered[(i - 1 + filtered.length) % filtered.length].th}" alt="" loading="lazy"/></div>
       <div class="adj-preview is--bottom"><img src="${filtered[(i + 1) % filtered.length].th}" alt="" loading="lazy"/></div>
     `;
-    w.appendChild(slide);
+    container.appendChild(slide);
   });
 
-  if (swiperInstance) { swiperInstance.destroy(true, true); swiperInstance = null; }
-  swiperInstance = new Swiper('#project-swiper', {
-    direction: 'vertical',
-    slidesPerView: 1,
-    speed: 0,
-    mousewheel: { sensitivity: 1 },
-    keyboard: true,
-    allowTouchMove: true,
-    on: {
-      slideChangeTransitionStart(sw) {
-        if (isTransitioning) { return; }
-        doSlideTransition(sw.activeIndex);
-      },
-      init(sw) { updateBgVideo(0); }
-    }
-  });
-  initPreviewHovers();
+  currentSlide = 0;
+  updateBgVideo(0);
+  initPreviewClicks();
+  initObserver();
 }
 
-/* ═══════ P0: CENTER HOVER — play/pause bg video ═══════ */
+/* ═══════ GSAP OBSERVER — Scroll-Based Navigation ═══════ */
+let observerInstance = null;
+
+function initObserver() {
+  if (observerInstance) { observerInstance.kill(); observerInstance = null; }
+  if (typeof Observer === 'undefined' || currentView !== 'slider') return;
+
+  observerInstance = Observer.create({
+    type: 'wheel,touch,pointer',
+    wheelSpeed: -1,
+    onDown: () => goToSlide(currentSlide - 1),
+    onUp: () => goToSlide(currentSlide + 1),
+    tolerance: 10,
+    preventDefault: true,
+  });
+}
+
+function goToSlide(idx) {
+  if (isAnimating) return;
+  if (idx < 0 || idx >= filtered.length) return;
+  if (idx === currentSlide) return;
+
+  isAnimating = true;
+  const dir = idx > currentSlide ? 1 : -1;
+  const slides = document.querySelectorAll('.slide');
+  const oldSlide = slides[currentSlide];
+  const newSlide = slides[idx];
+
+  if (!oldSlide || !newSlide) { isAnimating = false; return; }
+
+  // Crossfade bg video
+  updateBgVideo(idx);
+
+  // Animate out old slide
+  const tl = gsap.timeline({
+    onComplete: () => {
+      oldSlide.classList.remove('is--active');
+      currentSlide = idx;
+      isAnimating = false;
+    }
+  });
+
+  // Make new slide visible but transparent
+  newSlide.style.opacity = '0';
+  newSlide.style.pointerEvents = 'none';
+  newSlide.classList.add('is--active');
+
+  const yOut = dir * -60;
+  const yIn = dir * 60;
+
+  // Animate old content out
+  tl.to(oldSlide.querySelector('.slide-name-left'), { y: yOut, opacity: 0, duration: 0.5, ease: 'mainEase' }, 0)
+    .to(oldSlide.querySelector('.slide-name-right'), { y: yOut, opacity: 0, duration: 0.5, ease: 'mainEase' }, 0.02)
+    .to(oldSlide.querySelector('.slide-center'), { opacity: 0, duration: 0.35, ease: 'power2.out' }, 0)
+    // Crossfade
+    .to(oldSlide, { opacity: 0, duration: 0.3 }, 0.3)
+    .to(newSlide, { opacity: 1, duration: 0.3 }, 0.3)
+    // Animate new content in
+    .fromTo(newSlide.querySelector('.slide-name-left'), { y: yIn, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'mainEase' }, 0.35)
+    .fromTo(newSlide.querySelector('.slide-name-right'), { y: yIn, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'mainEase' }, 0.38)
+    .fromTo(newSlide.querySelector('.slide-center'), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 0.4)
+    .set(newSlide, { pointerEvents: 'all' }, 0.5)
+    .fromTo(newSlide.querySelector('.slide-top-type span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.4)
+    .fromTo(newSlide.querySelector('.slide-num span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.45)
+    .fromTo(newSlide.querySelector('.slide-client span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.5);
+}
+
+/* ═══════ CENTER CLICK → Open Player ═══════ */
+function initPreviewClicks() {
+  document.querySelectorAll('.video-preview-wrapper[data-play-idx]').forEach(wrapper => {
+    wrapper.addEventListener('click', () => {
+      const idx = parseInt(wrapper.dataset.playIdx);
+      openPlayer(idx);
+    });
+  });
+}
+
+/* ═══════ CENTER HOVER — play/pause bg video ═══════ */
 function initPreviewHovers() {
   document.querySelectorAll('.video-preview-wrapper').forEach(wrapper => {
     if (wrapper.dataset.hoverBound) return;
@@ -780,81 +791,25 @@ function updateBgVideo(idx) {
   prevEl.classList.remove('is--active');
   setTimeout(() => { prevEl.pause(); prevEl.src = ''; }, 600);
   bgActiveIdx = nextIdx;
-  updateMiniPreview(idx);
 }
 
-/* ═══════ P1: BLACK WIPE TRANSITION ═══════ */
-let isTransitioning = false;
-let blockAlignState = 0; // alternates alignment each transition
-
-function doSlideTransition(idx) {
-  if (typeof gsap === 'undefined') {
-    updateBgVideo(idx);
-    animateSlideIn(idx);
-    return;
-  }
+/* ═══════ NAV WIPE TRANSITION (nav links only) ═══════ */
+function doNavTransition(callback) {
+  if (typeof gsap === 'undefined') { if (callback) callback(); return; }
 
   const blocks = document.querySelectorAll('.transition-block');
-  if (!blocks.length || isTransitioning) {
-    updateBgVideo(idx);
-    animateSlideIn(idx);
-    return;
-  }
+  if (!blocks.length) { if (callback) callback(); return; }
 
-  isTransitioning = true;
-  if (swiperInstance) swiperInstance.disable();
   const dur = 1.35;
+  const tl = gsap.timeline();
 
-  // Set alignment: alternate which side grows from
-  blocks.forEach((b, i) => {
-    const fromTop = (blockAlignState + i) % 2 === 0;
-    b.style.alignSelf = fromTop ? 'start' : 'end';
-  });
-
-  const tl = gsap.timeline({
-    onComplete: () => {
-      isTransitioning = false;
-      if (swiperInstance) swiperInstance.enable();
-    }
-  });
-
-  // Phase 1: wipe in (cover screen)
   tl.fromTo(blocks, { height: '0%' }, {
     height: '100%', duration: dur * 0.5, ease: 'transitionEase', stagger: 0.03
   })
-  // At midpoint: swap content
-  .call(() => {
-    updateBgVideo(idx);
-    // Flip alignment for reveal
-    blocks.forEach((b, i) => {
-      const fromTop = (blockAlignState + i) % 2 === 0;
-      b.style.alignSelf = fromTop ? 'end' : 'start';
-    });
-  })
-  // Phase 2: wipe out (reveal new slide)
+  .call(() => { if (callback) callback(); })
   .fromTo(blocks, { height: '100%' }, {
     height: '0%', duration: dur * 0.5, ease: 'transitionEase', stagger: 0.03
-  }, '+=0.05')
-  .call(() => {
-    animateSlideIn(idx);
-    blockAlignState = (blockAlignState + 1) % 2;
-  });
-}
-
-/* ═══════ SLIDE ANIMATIONS ═══════ */
-function animateSlideIn(idx) {
-  if (typeof gsap === 'undefined') return;
-  const slides = document.querySelectorAll('.swiper-slide');
-  const slide = slides[idx];
-  if (!slide) return;
-
-  const tl = gsap.timeline();
-  tl.fromTo(slide.querySelector('.slide-name-left'), { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'mainEase' }, 0)
-    .fromTo(slide.querySelector('.slide-name-right'), { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'mainEase' }, 0.05)
-    .fromTo(slide.querySelector('.slide-play-inner'), { y: '110%' }, { y: '0%', duration: 0.6, ease: 'mainEase' }, 0.15)
-    .fromTo(slide.querySelector('.slide-top-type span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.1)
-    .fromTo(slide.querySelector('.slide-num span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.15)
-    .fromTo(slide.querySelector('.slide-client span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase' }, 0.2);
+  }, '+=0.1');
 }
 
 /* ═══════ RENDER LIST ═══════ */
@@ -931,6 +886,9 @@ function openPlayer(idx) {
   player.classList.add('is--active');
   document.getElementById('player-pause').textContent = 'pause';
 
+  // Disable observer while player is open
+  if (observerInstance) observerInstance.disable();
+
   vid.ontimeupdate = () => {
     document.getElementById('player-time-current').textContent = fmtTime(vid.currentTime);
     document.getElementById('player-time-total').textContent = fmtTime(vid.duration || 0);
@@ -942,6 +900,9 @@ function closePlayer() {
   const vid = document.getElementById('player-video');
   vid.pause(); vid.src = '';
   player.classList.remove('is--active');
+
+  // Re-enable observer
+  if (observerInstance) observerInstance.enable();
 }
 
 function fmtTime(s) {
@@ -959,16 +920,10 @@ document.getElementById('player-pause').addEventListener('click', () => {
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePlayer(); });
 
-/* Swiper slide play click */
-document.addEventListener('click', e => {
-  const playBtn = e.target.closest('.slide-play');
-  if (playBtn) { openPlayer(parseInt(playBtn.dataset.idx)); }
-});
-
 /* ═══════ VIEW TOGGLE ═══════ */
 function setView(view) {
   currentView = view;
-  const sv = document.getElementById('swiper-view');
+  const sv = document.getElementById('slider-view');
   const lv = document.getElementById('list-view');
 
   document.querySelectorAll('.option-item').forEach(b => {
@@ -978,12 +933,13 @@ function setView(view) {
   if (view === 'slider') {
     sv.classList.remove('is--hidden');
     lv.classList.remove('is--active');
-    renderSwiper();
+    renderSlides();
+    initPreviewHovers();
   } else {
     sv.classList.add('is--hidden');
     lv.classList.add('is--active');
     renderList();
-    if (swiperInstance) { swiperInstance.destroy(true, true); swiperInstance = null; }
+    if (observerInstance) { observerInstance.kill(); observerInstance = null; }
   }
 }
 
@@ -1000,13 +956,16 @@ document.getElementById('filter-bar').addEventListener('click', e => {
   currentFilter = item.dataset.filter;
   filtered = currentFilter === 'all' ? [...P] : P.filter(p => p.cat === currentFilter);
 
-  if (currentView === 'slider') renderSwiper();
+  if (currentView === 'slider') { renderSlides(); initPreviewHovers(); }
   else renderList();
 });
 
-/* ═══════ MENU (nav links) ═══════ */
+/* ═══════ MENU (nav links — wipe transition) ═══════ */
 document.querySelectorAll('.nav-link-top').forEach(l => {
-  l.addEventListener('click', e => { e.preventDefault(); });
+  l.addEventListener('click', e => {
+    e.preventDefault();
+    doNavTransition();
+  });
 });
 
 /* ═══════ CURSOR ═══════ */
@@ -1018,7 +977,7 @@ document.querySelectorAll('.nav-link-top').forEach(l => {
   document.addEventListener('mouseenter', () => c.classList.remove('is--hidden'));
 
   function attachHovers() {
-    document.querySelectorAll('a,button,.project-item,.filter-item,.option-item,.slide-play,.nav-menu-link').forEach(el => {
+    document.querySelectorAll('a,button,.project-item,.filter-item,.option-item,.video-preview-wrapper,.nav-menu-link').forEach(el => {
       el.addEventListener('mouseenter', () => c.classList.add('is--big'));
       el.addEventListener('mouseleave', () => c.classList.remove('is--big'));
     });
@@ -1035,17 +994,32 @@ document.querySelectorAll('.nav-link-top').forEach(l => {
   })();
 })();
 
-/* ═══════ PRELOADER + INTRO (P2) ═══════ */
+/* ═══════ PRELOADER (with corner thumbnail flashes) ═══════ */
 (function runPreloader() {
   const pre = document.getElementById('preloader');
   const text = document.getElementById('preloader-text');
   const counter = document.getElementById('preloader-counter');
   const name = document.getElementById('preloader-name');
-  const intro = document.getElementById('intro-overlay');
-  const brand = document.getElementById('intro-brand');
+  const corners = ['corner-tl', 'corner-tr', 'corner-bl', 'corner-br'];
   let count = 0;
+  let flashInterval = null;
 
   setTimeout(() => text.classList.add('is--reveal'), 200);
+
+  // Start corner thumbnail flashes
+  flashInterval = setInterval(() => {
+    // Pick 1-2 random corners
+    const numFlashes = Math.random() > 0.5 ? 2 : 1;
+    const shuffled = corners.sort(() => Math.random() - 0.5);
+    for (let i = 0; i < numFlashes; i++) {
+      const cornerEl = document.getElementById(shuffled[i]);
+      const randomProject = P[Math.floor(Math.random() * P.length)];
+      const img = cornerEl.querySelector('img');
+      img.src = randomProject.th;
+      cornerEl.classList.add('is--flash');
+      setTimeout(() => cornerEl.classList.remove('is--flash'), 350 + Math.random() * 150);
+    }
+  }, 350);
 
   const countInterval = setInterval(() => {
     count += Math.floor(Math.random() * 12) + 3;
@@ -1053,45 +1027,25 @@ document.querySelectorAll('.nav-link-top').forEach(l => {
     counter.textContent = String(count).padStart(3, '0');
     if (count >= 100) {
       clearInterval(countInterval);
+      clearInterval(flashInterval);
+      // Hide all corner flashes
+      corners.forEach(id => document.getElementById(id).classList.remove('is--flash'));
+
       setTimeout(() => name.classList.add('is--reveal'), 200);
       setTimeout(() => {
-        // Hide preloader, reveal intro brand overlay
         pre.classList.add('is--done');
+        // Remove corner elements
+        corners.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.style.display = 'none';
+        });
         setTimeout(() => {
           pre.style.display = 'none';
-          runIntroAnimation();
+          initGSAP();
         }, 800);
       }, 1200);
     }
   }, 80);
-
-  function runIntroAnimation() {
-    if (typeof gsap === 'undefined') {
-      intro.style.display = 'none';
-      initGSAP();
-      return;
-    }
-
-    const leftSpan = brand.querySelector('.intro-left');
-    const rightSpan = brand.querySelector('.intro-right');
-
-    const itl = gsap.timeline({
-      onComplete: () => {
-        intro.style.display = 'none';
-        initGSAP();
-      }
-    });
-
-    // Phase 1: fade in "VideoContent" centered on black
-    itl.to(brand, { opacity: 1, duration: 0.6, ease: 'power2.out' })
-    // Phase 2: hold
-    .to({}, { duration: 1.2 })
-    // Phase 3: split left/right
-    .to(leftSpan, { x: '-35vw', duration: 1.2, ease: 'mainEase' }, 'split')
-    .to(rightSpan, { x: '35vw', duration: 1.2, ease: 'mainEase' }, 'split')
-    // Phase 4: fade out overlay, reveal bg video
-    .to(intro, { opacity: 0, duration: 0.8, ease: 'power2.inOut' }, '-=0.4');
-  }
 })();
 
 /* ═══════ GSAP INIT ═══════ */
@@ -1101,8 +1055,15 @@ function initGSAP() {
   gsap.from('.site-footer', { opacity: 0, y: 15, duration: 0.6, ease: 'mainEase', delay: 0.15 });
   gsap.from('.decor-rulers', { opacity: 0, duration: 1, delay: 0.3 });
 
-  if (swiperInstance && filtered.length > 0) {
-    animateSlideIn(0);
+  // Animate first slide in
+  const firstSlide = document.querySelector('.slide.is--active');
+  if (firstSlide) {
+    gsap.fromTo(firstSlide.querySelector('.slide-name-left'), { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'mainEase', delay: 0.2 });
+    gsap.fromTo(firstSlide.querySelector('.slide-name-right'), { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'mainEase', delay: 0.25 });
+    gsap.fromTo(firstSlide.querySelector('.slide-center'), { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.out', delay: 0.3 });
+    gsap.fromTo(firstSlide.querySelector('.slide-top-type span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase', delay: 0.35 });
+    gsap.fromTo(firstSlide.querySelector('.slide-num span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase', delay: 0.4 });
+    gsap.fromTo(firstSlide.querySelector('.slide-client span'), { y: '100%' }, { y: '0%', duration: 0.5, ease: 'mainEase', delay: 0.45 });
   }
 }
 
@@ -1125,8 +1086,9 @@ document.querySelectorAll('.nav-menu-link, .nav-menu-btn').forEach(el => {
 });
 
 /* ═══════ BOOT ═══════ */
-renderSwiper();
+renderSlides();
 renderList();
+initPreviewHovers();
 </script>
 </body>
 </html>

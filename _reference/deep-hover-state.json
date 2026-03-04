@@ -1,0 +1,13 @@
+{
+  "hoverInner": {
+    "opacity": "1",
+    "display": "flex",
+    "visibility": "visible",
+    "html": "<div class=\"text-dot\"></div><div class=\"overflow-hidden\"><div data-inner=\"\" class=\"text-medium is--relative\" style=\"position: relative; display: inline-block; overflow: hidden;\"><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">p</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">l</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">a</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">y</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">&nbsp;</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">v</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">i</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">d</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">e</span></span><span style=\"position: relative; display: inline-block; overflow: hidden; vertical-align: top;\"><span style=\"display: block; transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); transform: translateY(0px);\">o</span></span></div></div>"
+  },
+  "bgVideo": {
+    "paused": false,
+    "currentTime": 1.648442,
+    "src": ""
+  }
+}
