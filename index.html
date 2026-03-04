@@ -79,7 +79,7 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 @keyframes rulerScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
 
 /* ─── Navbar ────────────────────────────────────────────────── */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:9999;height:60px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;background:transparent}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:9999;height:auto;padding:29px 20px 0;display:flex;align-items:flex-start;justify-content:space-between;background:transparent}
 .nav-logo{font-family:var(--serif);font-weight:200;font-size:clamp(1.1rem,1.4vw,1.6rem);letter-spacing:-0.01em;display:flex;align-items:baseline;cursor:none;position:relative}
 .nav-logo .il{font-family:var(--serif-i);font-style:italic}
 .nav-logo .char-wrap{position:relative;display:inline-block}
@@ -87,17 +87,17 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .nav-logo:hover .char-dup{opacity:1;transform:translateY(0)}
 .nav-logo:hover .char-main{transform:translateY(100%);opacity:0}
 .nav-logo .char-main{transition:transform .4s var(--ease),opacity .3s;display:inline-block}
-.nav-center{display:flex;align-items:center;gap:0.4rem;font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);letter-spacing:0.05em;text-transform:uppercase;position:absolute;left:180px;top:50%;transform:translateY(-50%)}
+.nav-center{display:flex;align-items:center;gap:0.4rem;font-family:var(--sans);font-size:10.944px;letter-spacing:0.05em;text-transform:uppercase;position:absolute;left:256px;top:29px}
 .nav-creative-dot{width:5px;height:5px;border-radius:50%;background:var(--lemon)}
 .nav-creative-text{color:var(--dimmer);font-weight:400;font-size:inherit;letter-spacing:inherit}
 .nav-view-btn{color:var(--dimmer);cursor:none;transition:color .3s;font-weight:500;font-size:inherit;letter-spacing:inherit;text-transform:inherit;font-family:inherit}
 .nav-view-btn.is--active{color:var(--lemon)}
 .nav-view-btn:hover{color:var(--lemon)}
-.nav-right-block{display:flex;align-items:flex-start;gap:2rem}
+.nav-right-block{display:flex;align-items:flex-start;gap:5.3rem}
 .nav-col{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:relative}
 .nav-dot-active{width:4px;height:4px;border-radius:50%;background:var(--lemon);position:absolute;left:-10px;top:4px}
-.nav-link-top{font-family:var(--sans);font-weight:400;font-size:clamp(0.55rem,0.65vw,0.7rem);letter-spacing:0.03em;text-transform:uppercase;color:var(--lemon);cursor:none;transition:color .3s}
-.nav-link-top.is--dim{color:var(--dimmer)}
+.nav-link-top{font-family:var(--sans);font-weight:500;font-size:10.944px;letter-spacing:0.03em;text-transform:uppercase;color:rgba(255,251,242,0.7);cursor:none;transition:color .3s}
+.nav-link-top.is--active{color:var(--lemon)}
 .nav-link-top.is--bold{font-weight:500}
 .nav-link-top:hover{color:var(--lemon)}
 .nav-contact{align-self:flex-start}
@@ -114,7 +114,7 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 /* ─── Background Block ──────────────────────────────────────── */
 .bg-block{position:fixed;inset:0;z-index:1;overflow:hidden;background:var(--bg)}
 .bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
-.bg-video.is--active{opacity:0.7}
+.bg-video.is--active{opacity:1}
 
 /* ─── Main Container ────────────────────────────────────────── */
 .page-main{position:relative;z-index:2;height:100vh;overflow:hidden}
@@ -128,11 +128,11 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .slide.is--active{opacity:1;pointer-events:all;z-index:2}
 
 /* Slide content — 3-column grid matching original */
-.slide-content{position:absolute;inset:0;display:grid;grid-template-columns:1fr 34.3% 1fr;grid-template-rows:100%;align-items:center;justify-content:center;z-index:5;padding:0;gap:4px}
+.slide-content{position:absolute;inset:0;display:grid;grid-template-columns:1fr 34.3% 1fr;grid-template-rows:100%;align-items:center;justify-content:center;z-index:5;padding:0;gap:2px}
 
 /* Name columns — 95px split title */
-.slide-name-left{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:right;color:var(--lemon);align-self:center;padding-left:3.5vw}
-.slide-name-right{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:left;color:var(--lemon);align-self:center;padding-right:3.5vw}
+.slide-name-left{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:right;color:var(--lemon);align-self:center;padding:0 0 0 10px}
+.slide-name-right{font-family:var(--serif);font-weight:200;font-size:clamp(2.2rem,6.6vw,5.94rem);line-height:1.06;letter-spacing:-0.02em;text-align:left;color:var(--lemon);align-self:center;padding:0 10px 0 0}
 .slide-name-left .il,.slide-name-right .il{font-family:var(--serif-i);font-style:italic}
 
 /* Center column — info + play */
@@ -149,10 +149,11 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .bracket.bl{bottom:-1px;left:-1px}.bracket.bl::before{bottom:0;left:0;width:12px;height:1px}.bracket.bl::after{bottom:0;left:0;width:1px;height:12px}
 .bracket.br{bottom:-1px;right:-1px}.bracket.br::before{bottom:0;right:0;width:12px;height:1px}.bracket.br::after{bottom:0;right:0;width:1px;height:12px}
 
-/* Play Video label — centered in preview box, sans-serif */
-.slide-play-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:0.5rem;cursor:none;z-index:6}
-.play-dot{width:6px;height:6px;border-radius:50%;background:var(--lemon);flex-shrink:0}
-.play-text{font-family:var(--sans);font-weight:500;font-size:clamp(0.6rem,0.75vw,0.8rem);letter-spacing:0.08em;text-transform:uppercase;color:var(--lemon)}
+/* Play label — hidden by default, visible on hover only */
+.slide-play-label{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:flex-end;justify-content:center;gap:0;cursor:none;z-index:6;opacity:0;transition:opacity .3s;padding-bottom:8px}
+.video-preview-wrapper:hover .slide-play-label{opacity:1}
+.play-dot{display:none}
+.play-text{font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:0.02em;text-transform:none;color:var(--lemon)}
 
 /* Project info top/bottom in center column */
 .slide-top{display:flex;align-items:center;justify-content:space-between;gap:0.8rem}
@@ -169,11 +170,11 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .slide-client span{display:block;transition:transform .5s var(--ease)}
 .slide-total{font-family:var(--mono);font-size:10px;letter-spacing:-0.01em;color:var(--dimmer);overflow:hidden}
 
-/* Adjacent project previews (top/bottom) */
-.adj-preview{position:absolute;left:50%;transform:translateX(-50%);width:34.3%;z-index:3;overflow:hidden;pointer-events:none}
-.adj-preview.is--top{top:-82%;height:85%}
-.adj-preview.is--bottom{bottom:-72%;height:85%}
-.adj-preview img{width:100%;height:100%;object-fit:cover;opacity:0.35}
+/* Adjacent project previews — 256×144 at viewport top/bottom center */
+.adj-preview{position:fixed;left:50%;transform:translateX(-50%);width:256px;height:144px;z-index:200;overflow:hidden;pointer-events:none}
+.adj-preview.is--top{top:0}
+.adj-preview.is--bottom{bottom:0}
+.adj-preview img{width:100%;height:100%;object-fit:cover}
 
 /* ─── Video Hover Overlay ─────────────────────────────────── */
 .video-hover-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease-out;z-index:7;pointer-events:none}
@@ -240,30 +241,30 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
 .project-bg-video{position:fixed;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s;pointer-events:none}
 
 /* ─── Footer ────────────────────────────────────────────────── */
-.site-footer{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:16px 20px 18px;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none}
-.footer-left{display:flex;align-items:center;gap:1.5rem;pointer-events:all}
-.footer-year{font-family:var(--sans);font-size:clamp(0.55rem,0.65vw,0.7rem);color:var(--dimmer);letter-spacing:0.02em;display:none}
+.site-footer{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:0 0 20px;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none}
+.footer-left{display:flex;align-items:center;gap:1.5rem;pointer-events:all;padding-left:20px}
+.footer-year{font-family:var(--sans);font-size:14px;color:var(--dimmer);letter-spacing:0.02em;display:none}
 @media(min-width:768px){.footer-year{display:block}}
 .footer-toggle{display:flex;align-items:center;gap:0}
 .option-item{cursor:none;position:relative;overflow:hidden;height:1.2em}
-.option-text{font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);color:var(--dimmer);letter-spacing:0.02em;transition:color .3s}
+.option-text{font-family:var(--sans);font-size:14px;color:var(--dimmer);letter-spacing:0.02em;text-transform:uppercase;transition:color .3s}
 .option-item.is--active .option-text{color:var(--lemon)}
 .option-item:hover .option-text{color:var(--lemon)}
-.option-sep{font-family:var(--sans);font-size:clamp(0.6rem,0.7vw,0.75rem);color:var(--dimmer);margin:0 0.3rem}
+.option-sep{font-family:var(--sans);font-size:14px;color:var(--dimmer);margin:0 0.3rem}
 
-.footer-right{display:flex;align-items:flex-end;gap:2rem;pointer-events:all}
-.footer-filters{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.footer-right{display:flex;align-items:flex-end;gap:2rem;pointer-events:all;padding-right:20px}
+.footer-filters{display:flex;flex-direction:column;align-items:flex-start;gap:1px}
 .filter-item{display:flex;align-items:center;gap:0.3rem;cursor:none}
 .filter-item .dot{width:5px;height:5px;border-radius:50%;background:var(--lemon);opacity:0;transition:opacity .3s;flex-shrink:0}
 .filter-item.is--active .dot{opacity:1}
-.filter-label{font-family:var(--sans);font-size:clamp(0.55rem,0.65vw,0.7rem);color:var(--dimmer);letter-spacing:0.02em;text-transform:uppercase;white-space:nowrap;transition:color .3s}
+.filter-label{font-family:var(--sans);font-size:14px;color:var(--dimmer);letter-spacing:0.02em;text-transform:uppercase;white-space:nowrap;transition:color .3s}
 .filter-item.is--active .filter-label{color:var(--lemon)}
 .filter-item:hover .filter-label{color:var(--lemon)}
 .filter-count{font-family:var(--mono);font-size:0.8em;opacity:0.6;margin-left:0.15em}
-.footer-end{display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;margin-left:2rem;align-self:end}
+.footer-end{display:flex;flex-direction:column;align-items:flex-end;gap:2px;margin-left:2rem;align-self:end}
 .footer-clock{font-family:var(--mono);font-size:10px;color:var(--dimmer);letter-spacing:0.02em;display:none}
 @media(min-width:768px){.footer-clock{display:block}}
-.footer-credits{font-family:var(--sans);font-size:clamp(0.55rem,0.65vw,0.7rem);color:var(--dimmer);letter-spacing:0.02em;text-transform:uppercase;cursor:none;transition:color .3s}
+.footer-credits{font-family:var(--sans);font-size:14px;color:var(--dimmer);letter-spacing:0.02em;text-transform:uppercase;cursor:none;transition:color .3s}
 .footer-credits:hover{color:var(--lemon)}
 
 /* ─── Responsive ────────────────────────────────────────────── */
@@ -383,14 +384,14 @@ button{background:none;border:none;cursor:none;color:inherit;font:inherit}
   <div class="nav-right-block">
     <div class="nav-col">
       <span class="nav-dot-active"></span>
-      <a href="#" class="nav-link-top is--bold">WORK</a>
-      <a href="#" class="nav-link-top is--dim">REPORTAGE</a>
+      <a href="#" class="nav-link-top is--active is--bold">Work</a>
+      <a href="#" class="nav-link-top">reportage</a>
     </div>
     <div class="nav-col">
-      <a href="#" class="nav-link-top">ARCHIVE</a>
-      <a href="#" class="nav-link-top is--dim">ABOUT</a>
+      <a href="#" class="nav-link-top">Archive</a>
+      <a href="#" class="nav-link-top">About</a>
     </div>
-    <a href="#" class="nav-link-top nav-contact">CONTACT</a>
+    <a href="#" class="nav-link-top nav-contact">Contact</a>
   </div>
 </nav>
 
@@ -657,8 +658,7 @@ function renderSlides() {
           <div class="video-preview-wrapper" data-play-idx="${i}">
             <div class="video-preview-box"></div>
             <div class="slide-play-label">
-              <span class="play-dot"></span>
-              <span class="play-text">PLAY VIDEO</span>
+              <span class="play-text"><span class="il">P</span>lay</span>
             </div>
             <div class="bracket tl"></div><div class="bracket tr"></div>
             <div class="bracket bl"></div><div class="bracket br"></div>
